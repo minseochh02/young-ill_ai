@@ -1,0 +1,39 @@
+{
+  "sales": [
+    {
+      "date": "2025-11-01",
+      "branch": "창원",
+      "total_sales": 33826958.0,
+      "mobil_sell_out": 31562388.0,
+      "모빌(Sell-out)_Total(L)": 15507.0,
+      "모빌(Sell-out)_Flagship(L)": 4615.0,
+      "mobil_sell_in_total": 0,
+      "모빌(Sell-in)_Flagship(L)": 0
+    }
+  ],
+  "collections": [
+    {
+      "date": "2025-11-01",
+      "branch": "창원",
+      "total_collection": 149600.0,
+      "cash": 149600.0,
+      "bill": 0.0,
+      "card": 0.0,
+      "etc1": 0,
+      "etc2": 0
+    }
+  ],
+  "funds": [],
+  "ar_balances": [],
+  "mobile": [
+    {
+      "date": "2025-11-01",
+      "branch": "창원",
+      "il_payment": 31562388.0,
+      "auto_payment": 0
+    }
+  ],
+  "expenses": [],
+  "major_expenses": [],
+  "generated_at": "2026-01-05T23:56:35.365328"
+}

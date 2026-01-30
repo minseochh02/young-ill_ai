@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Build output
+daily-report-dashboard/dist/
+
+# Cache
+.basic_sheet_cache.json
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Excel temp files
+~$*.xlsx
+
+# Backups (generated at runtime)
+daily-report-dashboard/src/data/backups/
+
+# Master excels (generated at runtime)
+1_Basic_Sheet/master/
+
+# Generated apps (PlayWright)
+PlayWright_codegen_영일0116/generated_apps/
+PlayWright_codegen_영일0116/node_modules/

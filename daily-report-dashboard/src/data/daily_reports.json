@@ -1,0 +1,2332 @@
+{
+  "generated_at": "2026-01-08T20:24:46.845506",
+  "dates": [
+    "2025-12-02",
+    "2025-12-03",
+    "2025-12-04",
+    "2025-12-05",
+    "2025-12-06",
+    "2025-12-07"
+  ],
+  "daily_data": [
+    {
+      "date": "2025-12-02",
+      "sales": [
+        {
+          "branch": "서울,화성 IL",
+          "total_sales": 1654238454.0,
+          "mobil_sell_out": 1611716271.0,
+          "mobil_sell_out_total_l": 338652.0,
+          "mobil_sell_out_flagship_l": 38421.0,
+          "mobil_sell_in_total_l": 167050.0,
+          "mobil_sell_in_flagship_l": 8422.0
+        },
+        {
+          "branch": "창원",
+          "total_sales": 429828889.0,
+          "mobil_sell_out": 402760089.0,
+          "mobil_sell_out_total_l": 73960.0,
+          "mobil_sell_out_flagship_l": 8526.0,
+          "mobil_sell_in_total_l": 67543.0,
+          "mobil_sell_in_flagship_l": 7518.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_sales": 94359638.0,
+          "mobil_sell_out": 85119638.0,
+          "mobil_sell_out_total_l": 22228.0,
+          "mobil_sell_out_flagship_l": 100.0,
+          "mobil_sell_in_total_l": 0.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_sales": 192911550.0,
+          "mobil_sell_out": 190334500.0,
+          "mobil_sell_out_total_l": 37560.0,
+          "mobil_sell_out_flagship_l": 1870.0,
+          "mobil_sell_in_total_l": 19008.0,
+          "mobil_sell_in_flagship_l": 600.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_sales": 452482893.0,
+          "mobil_sell_out": 405125105.0,
+          "mobil_sell_out_total_l": 89827.0,
+          "mobil_sell_out_flagship_l": 3367.0,
+          "mobil_sell_in_total_l": 104015.0,
+          "mobil_sell_in_flagship_l": 5567.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_sales": 210435278.0,
+          "mobil_sell_out": 198049098.0,
+          "mobil_sell_out_total_l": 39834.0,
+          "mobil_sell_out_flagship_l": 2292.0,
+          "mobil_sell_in_total_l": 67438.0,
+          "mobil_sell_in_flagship_l": 8240.0
+        },
+        {
+          "branch": "제주",
+          "total_sales": 24915300.0,
+          "mobil_sell_out": 24915300.0,
+          "mobil_sell_out_total_l": 5292.0,
+          "mobil_sell_out_flagship_l": 260.0,
+          "mobil_sell_in_total_l": 5940.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "부산",
+          "total_sales": 41602220.0,
+          "mobil_sell_out": 38243920.0,
+          "mobil_sell_out_total_l": 13365.0,
+          "mobil_sell_out_flagship_l": 99.0,
+          "mobil_sell_in_total_l": 14552.0,
+          "mobil_sell_in_flagship_l": 0.0
+        }
+      ],
+      "collections": [
+        {
+          "branch": "화성 IL",
+          "total_collection": 583715434.0,
+          "cash": 486588087.0,
+          "bill": 97127347.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 3200532678.0,
+          "current_sales": 1654238454.0,
+          "ar_balance": 4271055698.0
+        },
+        {
+          "branch": "창원",
+          "total_collection": 173106037.0,
+          "cash": 128474087.0,
+          "bill": 44007150.0,
+          "card": 624800.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 696043702.0,
+          "current_sales": 429828889.0,
+          "ar_balance": 952766554.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_collection": 50000000.0,
+          "cash": 50000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1021948556.0,
+          "current_sales": 94359638.0,
+          "ar_balance": 1066308194.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_collection": 173382550.0,
+          "cash": 144828300.0,
+          "bill": 0.0,
+          "card": 28554250.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 455541246.0,
+          "current_sales": 192911550.0,
+          "ar_balance": 475070246.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_collection": 200000000.0,
+          "cash": 200000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1787588760.0,
+          "current_sales": 452482893.0,
+          "ar_balance": 2040071653.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_collection": 71808000.0,
+          "cash": 15808000.0,
+          "bill": 56000000.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 309679575.0,
+          "current_sales": 210435278.0,
+          "ar_balance": 448306853.0
+        },
+        {
+          "branch": "제주",
+          "total_collection": 28088100.0,
+          "cash": 24254100.0,
+          "bill": 0.0,
+          "card": 3834000.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 86649300.0,
+          "current_sales": 24915300.0,
+          "ar_balance": 83476500.0
+        },
+        {
+          "branch": "부산",
+          "total_collection": 17212580.0,
+          "cash": 17212580.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 225944898.0,
+          "current_sales": 41602220.0,
+          "ar_balance": 250334538.0
+        }
+      ],
+      "funds": [
+        {
+          "type": "전잔",
+          "general_deposit": 2315216524.0,
+          "electronic_bill": 160037670.0,
+          "loans": 753546470.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76000000001,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        },
+        {
+          "type": "당입",
+          "general_deposit": 1260065835.0,
+          "electronic_bill": 56000000.0,
+          "loans": 141134497.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "지출",
+          "general_deposit": 1957740429.0,
+          "electronic_bill": 41200000.0,
+          "loans": 76347810.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "현잔",
+          "general_deposit": 1617541930.0,
+          "electronic_bill": 174837670.0,
+          "loans": 818333157.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        }
+      ],
+      "major_expenses": [
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 1500000000.0,
+          "description": "윤활유대(IL,AUTO)"
+        },
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 264802982.0,
+          "description": "윤활유대(MB)"
+        },
+        {
+          "client": "지에스엠비즈 주식회사 외",
+          "amount": 10110800.0,
+          "description": "윤활유대  "
+        },
+        {
+          "client": "우리-5억5천(261) 외",
+          "amount": 4311122.0,
+          "description": "대출이자(5억5천,12억5천)"
+        },
+        {
+          "client": "현금 시재금",
+          "amount": 4171700.0,
+          "description": "10월말(본사,화성,창원)"
+        },
+        {
+          "client": "롯데렌탈㈜",
+          "amount": 8656000.0,
+          "description": "차량렌탈료(14대)"
+        },
+        {
+          "client": "기아㈜",
+          "amount": 21993365.0,
+          "description": "화성 1톤 차량대금 외"
+        },
+        {
+          "client": "건강보험공단",
+          "amount": 55801070.0,
+          "description": "사대보험 외"
+        },
+        {
+          "client": "삼성카드",
+          "amount": 8482084.0,
+          "description": "삼성카드 이용대금명세서"
+        },
+        {
+          "client": "꽃누리 외",
+          "amount": 79411306.0,
+          "description": "10월 화환대 외"
+        }
+      ],
+      "mobil_payments": [
+        {
+          "branch": "화성 IL",
+          "il": 399575462.0,
+          "auto": 4856500.0,
+          "mbk": 35491073.0,
+          "total": 439923035.0
+        },
+        {
+          "branch": "창원 IL",
+          "il": 262419630.0,
+          "auto": 55631180.0,
+          "mbk": 34793982.0,
+          "total": 352844792.0
+        },
+        {
+          "branch": "화성 AUTO (중부)",
+          "il": 0.0,
+          "auto": 109072260.0,
+          "mbk": 0.0,
+          "total": 109072260.0
+        },
+        {
+          "branch": "남부지사",
+          "il": 0.0,
+          "auto": 38954300.0,
+          "mbk": 0.0,
+          "total": 38954300.0
+        },
+        {
+          "branch": "인천(서부)",
+          "il": 3366000.0,
+          "auto": 320755600.0,
+          "mbk": 42442118.0,
+          "total": 366563718.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "il": 4336200.0,
+          "auto": 268872010.0,
+          "mbk": 81167668.0,
+          "total": 354375878.0
+        },
+        {
+          "branch": "제주",
+          "il": 18143180.0,
+          "auto": -825000.0,
+          "mbk": 2299108.0,
+          "total": 19617288.0
+        },
+        {
+          "branch": "부산",
+          "il": 23588950.0,
+          "auto": 0.0,
+          "mbk": 33644013.0,
+          "total": 57232963.0
+        }
+      ],
+      "totals": {
+        "total_sales": 3100774222.0,
+        "total_mobil_sell_out": 2956263921.0,
+        "total_collection": 1297312701.0,
+        "total_ar_balance": 9587390236.0
+      }
+    },
+    {
+      "date": "2025-12-03",
+      "sales": [
+        {
+          "branch": "서울,화성 IL",
+          "total_sales": 1654238454.0,
+          "mobil_sell_out": 1611716271.0,
+          "mobil_sell_out_total_l": 338652.0,
+          "mobil_sell_out_flagship_l": 38421.0,
+          "mobil_sell_in_total_l": 167050.0,
+          "mobil_sell_in_flagship_l": 8422.0
+        },
+        {
+          "branch": "창원",
+          "total_sales": 429828889.0,
+          "mobil_sell_out": 402760089.0,
+          "mobil_sell_out_total_l": 73960.0,
+          "mobil_sell_out_flagship_l": 8526.0,
+          "mobil_sell_in_total_l": 67543.0,
+          "mobil_sell_in_flagship_l": 7518.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_sales": 94359638.0,
+          "mobil_sell_out": 85119638.0,
+          "mobil_sell_out_total_l": 22228.0,
+          "mobil_sell_out_flagship_l": 100.0,
+          "mobil_sell_in_total_l": 0.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_sales": 192911550.0,
+          "mobil_sell_out": 190334500.0,
+          "mobil_sell_out_total_l": 37560.0,
+          "mobil_sell_out_flagship_l": 1870.0,
+          "mobil_sell_in_total_l": 19008.0,
+          "mobil_sell_in_flagship_l": 600.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_sales": 452482893.0,
+          "mobil_sell_out": 405125105.0,
+          "mobil_sell_out_total_l": 89827.0,
+          "mobil_sell_out_flagship_l": 3367.0,
+          "mobil_sell_in_total_l": 104015.0,
+          "mobil_sell_in_flagship_l": 5567.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_sales": 210435278.0,
+          "mobil_sell_out": 198049098.0,
+          "mobil_sell_out_total_l": 39834.0,
+          "mobil_sell_out_flagship_l": 2292.0,
+          "mobil_sell_in_total_l": 67438.0,
+          "mobil_sell_in_flagship_l": 8240.0
+        },
+        {
+          "branch": "제주",
+          "total_sales": 24915300.0,
+          "mobil_sell_out": 24915300.0,
+          "mobil_sell_out_total_l": 5292.0,
+          "mobil_sell_out_flagship_l": 260.0,
+          "mobil_sell_in_total_l": 5940.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "부산",
+          "total_sales": 41602220.0,
+          "mobil_sell_out": 38243920.0,
+          "mobil_sell_out_total_l": 13365.0,
+          "mobil_sell_out_flagship_l": 99.0,
+          "mobil_sell_in_total_l": 14552.0,
+          "mobil_sell_in_flagship_l": 0.0
+        }
+      ],
+      "collections": [
+        {
+          "branch": "화성 IL",
+          "total_collection": 583715434.0,
+          "cash": 486588087.0,
+          "bill": 97127347.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 3200532678.0,
+          "current_sales": 1654238454.0,
+          "ar_balance": 4271055698.0
+        },
+        {
+          "branch": "창원",
+          "total_collection": 173106037.0,
+          "cash": 128474087.0,
+          "bill": 44007150.0,
+          "card": 624800.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 696043702.0,
+          "current_sales": 429828889.0,
+          "ar_balance": 952766554.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_collection": 50000000.0,
+          "cash": 50000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1021948556.0,
+          "current_sales": 94359638.0,
+          "ar_balance": 1066308194.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_collection": 173382550.0,
+          "cash": 144828300.0,
+          "bill": 0.0,
+          "card": 28554250.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 455541246.0,
+          "current_sales": 192911550.0,
+          "ar_balance": 475070246.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_collection": 200000000.0,
+          "cash": 200000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1787588760.0,
+          "current_sales": 452482893.0,
+          "ar_balance": 2040071653.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_collection": 71808000.0,
+          "cash": 15808000.0,
+          "bill": 56000000.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 309679575.0,
+          "current_sales": 210435278.0,
+          "ar_balance": 448306853.0
+        },
+        {
+          "branch": "제주",
+          "total_collection": 28088100.0,
+          "cash": 24254100.0,
+          "bill": 0.0,
+          "card": 3834000.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 86649300.0,
+          "current_sales": 24915300.0,
+          "ar_balance": 83476500.0
+        },
+        {
+          "branch": "부산",
+          "total_collection": 17212580.0,
+          "cash": 17212580.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 225944898.0,
+          "current_sales": 41602220.0,
+          "ar_balance": 250334538.0
+        }
+      ],
+      "funds": [
+        {
+          "type": "전잔",
+          "general_deposit": 2315216524.0,
+          "electronic_bill": 160037670.0,
+          "loans": 753546470.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76000000001,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        },
+        {
+          "type": "당입",
+          "general_deposit": 1260065835.0,
+          "electronic_bill": 56000000.0,
+          "loans": 141134497.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "지출",
+          "general_deposit": 1957740429.0,
+          "electronic_bill": 41200000.0,
+          "loans": 76347810.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "현잔",
+          "general_deposit": 1617541930.0,
+          "electronic_bill": 174837670.0,
+          "loans": 818333157.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        }
+      ],
+      "major_expenses": [
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 1500000000.0,
+          "description": "윤활유대(IL,AUTO)"
+        },
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 264802982.0,
+          "description": "윤활유대(MB)"
+        },
+        {
+          "client": "지에스엠비즈 주식회사 외",
+          "amount": 10110800.0,
+          "description": "윤활유대  "
+        },
+        {
+          "client": "우리-5억5천(261) 외",
+          "amount": 4311122.0,
+          "description": "대출이자(5억5천,12억5천)"
+        },
+        {
+          "client": "현금 시재금",
+          "amount": 4171700.0,
+          "description": "10월말(본사,화성,창원)"
+        },
+        {
+          "client": "롯데렌탈㈜",
+          "amount": 8656000.0,
+          "description": "차량렌탈료(14대)"
+        },
+        {
+          "client": "기아㈜",
+          "amount": 21993365.0,
+          "description": "화성 1톤 차량대금 외"
+        },
+        {
+          "client": "건강보험공단",
+          "amount": 55801070.0,
+          "description": "사대보험 외"
+        },
+        {
+          "client": "삼성카드",
+          "amount": 8482084.0,
+          "description": "삼성카드 이용대금명세서"
+        },
+        {
+          "client": "꽃누리 외",
+          "amount": 79411306.0,
+          "description": "10월 화환대 외"
+        }
+      ],
+      "mobil_payments": [
+        {
+          "branch": "화성 IL",
+          "il": 399575462.0,
+          "auto": 4856500.0,
+          "mbk": 35491073.0,
+          "total": 439923035.0
+        },
+        {
+          "branch": "창원 IL",
+          "il": 262419630.0,
+          "auto": 55631180.0,
+          "mbk": 34793982.0,
+          "total": 352844792.0
+        },
+        {
+          "branch": "화성 AUTO (중부)",
+          "il": 0.0,
+          "auto": 109072260.0,
+          "mbk": 0.0,
+          "total": 109072260.0
+        },
+        {
+          "branch": "남부지사",
+          "il": 0.0,
+          "auto": 38954300.0,
+          "mbk": 0.0,
+          "total": 38954300.0
+        },
+        {
+          "branch": "인천(서부)",
+          "il": 3366000.0,
+          "auto": 320755600.0,
+          "mbk": 42442118.0,
+          "total": 366563718.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "il": 4336200.0,
+          "auto": 268872010.0,
+          "mbk": 81167668.0,
+          "total": 354375878.0
+        },
+        {
+          "branch": "제주",
+          "il": 18143180.0,
+          "auto": -825000.0,
+          "mbk": 2299108.0,
+          "total": 19617288.0
+        },
+        {
+          "branch": "부산",
+          "il": 23588950.0,
+          "auto": 0.0,
+          "mbk": 33644013.0,
+          "total": 57232963.0
+        }
+      ],
+      "totals": {
+        "total_sales": 3100774222.0,
+        "total_mobil_sell_out": 2956263921.0,
+        "total_collection": 1297312701.0,
+        "total_ar_balance": 9587390236.0
+      }
+    },
+    {
+      "date": "2025-12-04",
+      "sales": [
+        {
+          "branch": "서울,화성 IL",
+          "total_sales": 1654238454.0,
+          "mobil_sell_out": 1611716271.0,
+          "mobil_sell_out_total_l": 338652.0,
+          "mobil_sell_out_flagship_l": 38421.0,
+          "mobil_sell_in_total_l": 167050.0,
+          "mobil_sell_in_flagship_l": 8422.0
+        },
+        {
+          "branch": "창원",
+          "total_sales": 429828889.0,
+          "mobil_sell_out": 402760089.0,
+          "mobil_sell_out_total_l": 73960.0,
+          "mobil_sell_out_flagship_l": 8526.0,
+          "mobil_sell_in_total_l": 67543.0,
+          "mobil_sell_in_flagship_l": 7518.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_sales": 94359638.0,
+          "mobil_sell_out": 85119638.0,
+          "mobil_sell_out_total_l": 22228.0,
+          "mobil_sell_out_flagship_l": 100.0,
+          "mobil_sell_in_total_l": 0.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_sales": 192911550.0,
+          "mobil_sell_out": 190334500.0,
+          "mobil_sell_out_total_l": 37560.0,
+          "mobil_sell_out_flagship_l": 1870.0,
+          "mobil_sell_in_total_l": 19008.0,
+          "mobil_sell_in_flagship_l": 600.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_sales": 452482893.0,
+          "mobil_sell_out": 405125105.0,
+          "mobil_sell_out_total_l": 89827.0,
+          "mobil_sell_out_flagship_l": 3367.0,
+          "mobil_sell_in_total_l": 104015.0,
+          "mobil_sell_in_flagship_l": 5567.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_sales": 210435278.0,
+          "mobil_sell_out": 198049098.0,
+          "mobil_sell_out_total_l": 39834.0,
+          "mobil_sell_out_flagship_l": 2292.0,
+          "mobil_sell_in_total_l": 67438.0,
+          "mobil_sell_in_flagship_l": 8240.0
+        },
+        {
+          "branch": "제주",
+          "total_sales": 24915300.0,
+          "mobil_sell_out": 24915300.0,
+          "mobil_sell_out_total_l": 5292.0,
+          "mobil_sell_out_flagship_l": 260.0,
+          "mobil_sell_in_total_l": 5940.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "부산",
+          "total_sales": 41602220.0,
+          "mobil_sell_out": 38243920.0,
+          "mobil_sell_out_total_l": 13365.0,
+          "mobil_sell_out_flagship_l": 99.0,
+          "mobil_sell_in_total_l": 14552.0,
+          "mobil_sell_in_flagship_l": 0.0
+        }
+      ],
+      "collections": [
+        {
+          "branch": "화성 IL",
+          "total_collection": 583715434.0,
+          "cash": 486588087.0,
+          "bill": 97127347.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 3200532678.0,
+          "current_sales": 1654238454.0,
+          "ar_balance": 4271055698.0
+        },
+        {
+          "branch": "창원",
+          "total_collection": 173106037.0,
+          "cash": 128474087.0,
+          "bill": 44007150.0,
+          "card": 624800.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 696043702.0,
+          "current_sales": 429828889.0,
+          "ar_balance": 952766554.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_collection": 50000000.0,
+          "cash": 50000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1021948556.0,
+          "current_sales": 94359638.0,
+          "ar_balance": 1066308194.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_collection": 173382550.0,
+          "cash": 144828300.0,
+          "bill": 0.0,
+          "card": 28554250.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 455541246.0,
+          "current_sales": 192911550.0,
+          "ar_balance": 475070246.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_collection": 200000000.0,
+          "cash": 200000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1787588760.0,
+          "current_sales": 452482893.0,
+          "ar_balance": 2040071653.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_collection": 71808000.0,
+          "cash": 15808000.0,
+          "bill": 56000000.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 309679575.0,
+          "current_sales": 210435278.0,
+          "ar_balance": 448306853.0
+        },
+        {
+          "branch": "제주",
+          "total_collection": 28088100.0,
+          "cash": 24254100.0,
+          "bill": 0.0,
+          "card": 3834000.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 86649300.0,
+          "current_sales": 24915300.0,
+          "ar_balance": 83476500.0
+        },
+        {
+          "branch": "부산",
+          "total_collection": 17212580.0,
+          "cash": 17212580.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 225944898.0,
+          "current_sales": 41602220.0,
+          "ar_balance": 250334538.0
+        }
+      ],
+      "funds": [
+        {
+          "type": "전잔",
+          "general_deposit": 2315216524.0,
+          "electronic_bill": 160037670.0,
+          "loans": 753546470.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76000000001,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        },
+        {
+          "type": "당입",
+          "general_deposit": 1260065835.0,
+          "electronic_bill": 56000000.0,
+          "loans": 141134497.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "지출",
+          "general_deposit": 1957740429.0,
+          "electronic_bill": 41200000.0,
+          "loans": 76347810.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "현잔",
+          "general_deposit": 1617541930.0,
+          "electronic_bill": 174837670.0,
+          "loans": 818333157.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        }
+      ],
+      "major_expenses": [
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 1500000000.0,
+          "description": "윤활유대(IL,AUTO)"
+        },
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 264802982.0,
+          "description": "윤활유대(MB)"
+        },
+        {
+          "client": "지에스엠비즈 주식회사 외",
+          "amount": 10110800.0,
+          "description": "윤활유대  "
+        },
+        {
+          "client": "우리-5억5천(261) 외",
+          "amount": 4311122.0,
+          "description": "대출이자(5억5천,12억5천)"
+        },
+        {
+          "client": "현금 시재금",
+          "amount": 4171700.0,
+          "description": "10월말(본사,화성,창원)"
+        },
+        {
+          "client": "롯데렌탈㈜",
+          "amount": 8656000.0,
+          "description": "차량렌탈료(14대)"
+        },
+        {
+          "client": "기아㈜",
+          "amount": 21993365.0,
+          "description": "화성 1톤 차량대금 외"
+        },
+        {
+          "client": "건강보험공단",
+          "amount": 55801070.0,
+          "description": "사대보험 외"
+        },
+        {
+          "client": "삼성카드",
+          "amount": 8482084.0,
+          "description": "삼성카드 이용대금명세서"
+        },
+        {
+          "client": "꽃누리 외",
+          "amount": 79411306.0,
+          "description": "10월 화환대 외"
+        }
+      ],
+      "mobil_payments": [
+        {
+          "branch": "화성 IL",
+          "il": 399575462.0,
+          "auto": 4856500.0,
+          "mbk": 35491073.0,
+          "total": 439923035.0
+        },
+        {
+          "branch": "창원 IL",
+          "il": 262419630.0,
+          "auto": 55631180.0,
+          "mbk": 34793982.0,
+          "total": 352844792.0
+        },
+        {
+          "branch": "화성 AUTO (중부)",
+          "il": 0.0,
+          "auto": 109072260.0,
+          "mbk": 0.0,
+          "total": 109072260.0
+        },
+        {
+          "branch": "남부지사",
+          "il": 0.0,
+          "auto": 38954300.0,
+          "mbk": 0.0,
+          "total": 38954300.0
+        },
+        {
+          "branch": "인천(서부)",
+          "il": 3366000.0,
+          "auto": 320755600.0,
+          "mbk": 42442118.0,
+          "total": 366563718.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "il": 4336200.0,
+          "auto": 268872010.0,
+          "mbk": 81167668.0,
+          "total": 354375878.0
+        },
+        {
+          "branch": "제주",
+          "il": 18143180.0,
+          "auto": -825000.0,
+          "mbk": 2299108.0,
+          "total": 19617288.0
+        },
+        {
+          "branch": "부산",
+          "il": 23588950.0,
+          "auto": 0.0,
+          "mbk": 33644013.0,
+          "total": 57232963.0
+        }
+      ],
+      "totals": {
+        "total_sales": 3100774222.0,
+        "total_mobil_sell_out": 2956263921.0,
+        "total_collection": 1297312701.0,
+        "total_ar_balance": 9587390236.0
+      }
+    },
+    {
+      "date": "2025-12-05",
+      "sales": [
+        {
+          "branch": "서울,화성 IL",
+          "total_sales": 1654238454.0,
+          "mobil_sell_out": 1611716271.0,
+          "mobil_sell_out_total_l": 338652.0,
+          "mobil_sell_out_flagship_l": 38421.0,
+          "mobil_sell_in_total_l": 167050.0,
+          "mobil_sell_in_flagship_l": 8422.0
+        },
+        {
+          "branch": "창원",
+          "total_sales": 429828889.0,
+          "mobil_sell_out": 402760089.0,
+          "mobil_sell_out_total_l": 73960.0,
+          "mobil_sell_out_flagship_l": 8526.0,
+          "mobil_sell_in_total_l": 67543.0,
+          "mobil_sell_in_flagship_l": 7518.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_sales": 94359638.0,
+          "mobil_sell_out": 85119638.0,
+          "mobil_sell_out_total_l": 22228.0,
+          "mobil_sell_out_flagship_l": 100.0,
+          "mobil_sell_in_total_l": 0.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_sales": 192911550.0,
+          "mobil_sell_out": 190334500.0,
+          "mobil_sell_out_total_l": 37560.0,
+          "mobil_sell_out_flagship_l": 1870.0,
+          "mobil_sell_in_total_l": 19008.0,
+          "mobil_sell_in_flagship_l": 600.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_sales": 452482893.0,
+          "mobil_sell_out": 405125105.0,
+          "mobil_sell_out_total_l": 89827.0,
+          "mobil_sell_out_flagship_l": 3367.0,
+          "mobil_sell_in_total_l": 104015.0,
+          "mobil_sell_in_flagship_l": 5567.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_sales": 210435278.0,
+          "mobil_sell_out": 198049098.0,
+          "mobil_sell_out_total_l": 39834.0,
+          "mobil_sell_out_flagship_l": 2292.0,
+          "mobil_sell_in_total_l": 67438.0,
+          "mobil_sell_in_flagship_l": 8240.0
+        },
+        {
+          "branch": "제주",
+          "total_sales": 24915300.0,
+          "mobil_sell_out": 24915300.0,
+          "mobil_sell_out_total_l": 5292.0,
+          "mobil_sell_out_flagship_l": 260.0,
+          "mobil_sell_in_total_l": 5940.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "부산",
+          "total_sales": 41602220.0,
+          "mobil_sell_out": 38243920.0,
+          "mobil_sell_out_total_l": 13365.0,
+          "mobil_sell_out_flagship_l": 99.0,
+          "mobil_sell_in_total_l": 14552.0,
+          "mobil_sell_in_flagship_l": 0.0
+        }
+      ],
+      "collections": [
+        {
+          "branch": "화성 IL",
+          "total_collection": 583715434.0,
+          "cash": 486588087.0,
+          "bill": 97127347.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 3200532678.0,
+          "current_sales": 1654238454.0,
+          "ar_balance": 4271055698.0
+        },
+        {
+          "branch": "창원",
+          "total_collection": 173106037.0,
+          "cash": 128474087.0,
+          "bill": 44007150.0,
+          "card": 624800.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 696043702.0,
+          "current_sales": 429828889.0,
+          "ar_balance": 952766554.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_collection": 50000000.0,
+          "cash": 50000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1021948556.0,
+          "current_sales": 94359638.0,
+          "ar_balance": 1066308194.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_collection": 173382550.0,
+          "cash": 144828300.0,
+          "bill": 0.0,
+          "card": 28554250.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 455541246.0,
+          "current_sales": 192911550.0,
+          "ar_balance": 475070246.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_collection": 200000000.0,
+          "cash": 200000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1787588760.0,
+          "current_sales": 452482893.0,
+          "ar_balance": 2040071653.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_collection": 71808000.0,
+          "cash": 15808000.0,
+          "bill": 56000000.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 309679575.0,
+          "current_sales": 210435278.0,
+          "ar_balance": 448306853.0
+        },
+        {
+          "branch": "제주",
+          "total_collection": 28088100.0,
+          "cash": 24254100.0,
+          "bill": 0.0,
+          "card": 3834000.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 86649300.0,
+          "current_sales": 24915300.0,
+          "ar_balance": 83476500.0
+        },
+        {
+          "branch": "부산",
+          "total_collection": 17212580.0,
+          "cash": 17212580.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 225944898.0,
+          "current_sales": 41602220.0,
+          "ar_balance": 250334538.0
+        }
+      ],
+      "funds": [
+        {
+          "type": "전잔",
+          "general_deposit": 2315216524.0,
+          "electronic_bill": 160037670.0,
+          "loans": 753546470.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76000000001,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        },
+        {
+          "type": "당입",
+          "general_deposit": 1260065835.0,
+          "electronic_bill": 56000000.0,
+          "loans": 141134497.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "지출",
+          "general_deposit": 1957740429.0,
+          "electronic_bill": 41200000.0,
+          "loans": 76347810.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "현잔",
+          "general_deposit": 1617541930.0,
+          "electronic_bill": 174837670.0,
+          "loans": 818333157.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        }
+      ],
+      "major_expenses": [
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 1500000000.0,
+          "description": "윤활유대(IL,AUTO)"
+        },
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 264802982.0,
+          "description": "윤활유대(MB)"
+        },
+        {
+          "client": "지에스엠비즈 주식회사 외",
+          "amount": 10110800.0,
+          "description": "윤활유대  "
+        },
+        {
+          "client": "우리-5억5천(261) 외",
+          "amount": 4311122.0,
+          "description": "대출이자(5억5천,12억5천)"
+        },
+        {
+          "client": "현금 시재금",
+          "amount": 4171700.0,
+          "description": "10월말(본사,화성,창원)"
+        },
+        {
+          "client": "롯데렌탈㈜",
+          "amount": 8656000.0,
+          "description": "차량렌탈료(14대)"
+        },
+        {
+          "client": "기아㈜",
+          "amount": 21993365.0,
+          "description": "화성 1톤 차량대금 외"
+        },
+        {
+          "client": "건강보험공단",
+          "amount": 55801070.0,
+          "description": "사대보험 외"
+        },
+        {
+          "client": "삼성카드",
+          "amount": 8482084.0,
+          "description": "삼성카드 이용대금명세서"
+        },
+        {
+          "client": "꽃누리 외",
+          "amount": 79411306.0,
+          "description": "10월 화환대 외"
+        }
+      ],
+      "mobil_payments": [
+        {
+          "branch": "화성 IL",
+          "il": 399575462.0,
+          "auto": 4856500.0,
+          "mbk": 35491073.0,
+          "total": 439923035.0
+        },
+        {
+          "branch": "창원 IL",
+          "il": 262419630.0,
+          "auto": 55631180.0,
+          "mbk": 34793982.0,
+          "total": 352844792.0
+        },
+        {
+          "branch": "화성 AUTO (중부)",
+          "il": 0.0,
+          "auto": 109072260.0,
+          "mbk": 0.0,
+          "total": 109072260.0
+        },
+        {
+          "branch": "남부지사",
+          "il": 0.0,
+          "auto": 38954300.0,
+          "mbk": 0.0,
+          "total": 38954300.0
+        },
+        {
+          "branch": "인천(서부)",
+          "il": 3366000.0,
+          "auto": 320755600.0,
+          "mbk": 42442118.0,
+          "total": 366563718.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "il": 4336200.0,
+          "auto": 268872010.0,
+          "mbk": 81167668.0,
+          "total": 354375878.0
+        },
+        {
+          "branch": "제주",
+          "il": 18143180.0,
+          "auto": -825000.0,
+          "mbk": 2299108.0,
+          "total": 19617288.0
+        },
+        {
+          "branch": "부산",
+          "il": 23588950.0,
+          "auto": 0.0,
+          "mbk": 33644013.0,
+          "total": 57232963.0
+        }
+      ],
+      "totals": {
+        "total_sales": 3100774222.0,
+        "total_mobil_sell_out": 2956263921.0,
+        "total_collection": 1297312701.0,
+        "total_ar_balance": 9587390236.0
+      }
+    },
+    {
+      "date": "2025-12-06",
+      "sales": [
+        {
+          "branch": "서울,화성 IL",
+          "total_sales": 1654238454.0,
+          "mobil_sell_out": 1611716271.0,
+          "mobil_sell_out_total_l": 338652.0,
+          "mobil_sell_out_flagship_l": 38421.0,
+          "mobil_sell_in_total_l": 167050.0,
+          "mobil_sell_in_flagship_l": 8422.0
+        },
+        {
+          "branch": "창원",
+          "total_sales": 429828889.0,
+          "mobil_sell_out": 402760089.0,
+          "mobil_sell_out_total_l": 73960.0,
+          "mobil_sell_out_flagship_l": 8526.0,
+          "mobil_sell_in_total_l": 67543.0,
+          "mobil_sell_in_flagship_l": 7518.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_sales": 94359638.0,
+          "mobil_sell_out": 85119638.0,
+          "mobil_sell_out_total_l": 22228.0,
+          "mobil_sell_out_flagship_l": 100.0,
+          "mobil_sell_in_total_l": 0.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_sales": 192911550.0,
+          "mobil_sell_out": 190334500.0,
+          "mobil_sell_out_total_l": 37560.0,
+          "mobil_sell_out_flagship_l": 1870.0,
+          "mobil_sell_in_total_l": 19008.0,
+          "mobil_sell_in_flagship_l": 600.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_sales": 452482893.0,
+          "mobil_sell_out": 405125105.0,
+          "mobil_sell_out_total_l": 89827.0,
+          "mobil_sell_out_flagship_l": 3367.0,
+          "mobil_sell_in_total_l": 104015.0,
+          "mobil_sell_in_flagship_l": 5567.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_sales": 210435278.0,
+          "mobil_sell_out": 198049098.0,
+          "mobil_sell_out_total_l": 39834.0,
+          "mobil_sell_out_flagship_l": 2292.0,
+          "mobil_sell_in_total_l": 67438.0,
+          "mobil_sell_in_flagship_l": 8240.0
+        },
+        {
+          "branch": "제주",
+          "total_sales": 24915300.0,
+          "mobil_sell_out": 24915300.0,
+          "mobil_sell_out_total_l": 5292.0,
+          "mobil_sell_out_flagship_l": 260.0,
+          "mobil_sell_in_total_l": 5940.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "부산",
+          "total_sales": 41602220.0,
+          "mobil_sell_out": 38243920.0,
+          "mobil_sell_out_total_l": 13365.0,
+          "mobil_sell_out_flagship_l": 99.0,
+          "mobil_sell_in_total_l": 14552.0,
+          "mobil_sell_in_flagship_l": 0.0
+        }
+      ],
+      "collections": [
+        {
+          "branch": "화성 IL",
+          "total_collection": 583715434.0,
+          "cash": 486588087.0,
+          "bill": 97127347.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 3200532678.0,
+          "current_sales": 1654238454.0,
+          "ar_balance": 4271055698.0
+        },
+        {
+          "branch": "창원",
+          "total_collection": 173106037.0,
+          "cash": 128474087.0,
+          "bill": 44007150.0,
+          "card": 624800.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 696043702.0,
+          "current_sales": 429828889.0,
+          "ar_balance": 952766554.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_collection": 50000000.0,
+          "cash": 50000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1021948556.0,
+          "current_sales": 94359638.0,
+          "ar_balance": 1066308194.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_collection": 173382550.0,
+          "cash": 144828300.0,
+          "bill": 0.0,
+          "card": 28554250.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 455541246.0,
+          "current_sales": 192911550.0,
+          "ar_balance": 475070246.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_collection": 200000000.0,
+          "cash": 200000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1787588760.0,
+          "current_sales": 452482893.0,
+          "ar_balance": 2040071653.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_collection": 71808000.0,
+          "cash": 15808000.0,
+          "bill": 56000000.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 309679575.0,
+          "current_sales": 210435278.0,
+          "ar_balance": 448306853.0
+        },
+        {
+          "branch": "제주",
+          "total_collection": 28088100.0,
+          "cash": 24254100.0,
+          "bill": 0.0,
+          "card": 3834000.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 86649300.0,
+          "current_sales": 24915300.0,
+          "ar_balance": 83476500.0
+        },
+        {
+          "branch": "부산",
+          "total_collection": 17212580.0,
+          "cash": 17212580.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 225944898.0,
+          "current_sales": 41602220.0,
+          "ar_balance": 250334538.0
+        }
+      ],
+      "funds": [
+        {
+          "type": "전잔",
+          "general_deposit": 2315216524.0,
+          "electronic_bill": 160037670.0,
+          "loans": 753546470.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76000000001,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        },
+        {
+          "type": "당입",
+          "general_deposit": 1260065835.0,
+          "electronic_bill": 56000000.0,
+          "loans": 141134497.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "지출",
+          "general_deposit": 1957740429.0,
+          "electronic_bill": 41200000.0,
+          "loans": 76347810.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "현잔",
+          "general_deposit": 1617541930.0,
+          "electronic_bill": 174837670.0,
+          "loans": 818333157.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        }
+      ],
+      "major_expenses": [
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 1500000000.0,
+          "description": "윤활유대(IL,AUTO)"
+        },
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 264802982.0,
+          "description": "윤활유대(MB)"
+        },
+        {
+          "client": "지에스엠비즈 주식회사 외",
+          "amount": 10110800.0,
+          "description": "윤활유대  "
+        },
+        {
+          "client": "우리-5억5천(261) 외",
+          "amount": 4311122.0,
+          "description": "대출이자(5억5천,12억5천)"
+        },
+        {
+          "client": "현금 시재금",
+          "amount": 4171700.0,
+          "description": "10월말(본사,화성,창원)"
+        },
+        {
+          "client": "롯데렌탈㈜",
+          "amount": 8656000.0,
+          "description": "차량렌탈료(14대)"
+        },
+        {
+          "client": "기아㈜",
+          "amount": 21993365.0,
+          "description": "화성 1톤 차량대금 외"
+        },
+        {
+          "client": "건강보험공단",
+          "amount": 55801070.0,
+          "description": "사대보험 외"
+        },
+        {
+          "client": "삼성카드",
+          "amount": 8482084.0,
+          "description": "삼성카드 이용대금명세서"
+        },
+        {
+          "client": "꽃누리 외",
+          "amount": 79411306.0,
+          "description": "10월 화환대 외"
+        }
+      ],
+      "mobil_payments": [
+        {
+          "branch": "화성 IL",
+          "il": 399575462.0,
+          "auto": 4856500.0,
+          "mbk": 35491073.0,
+          "total": 439923035.0
+        },
+        {
+          "branch": "창원 IL",
+          "il": 262419630.0,
+          "auto": 55631180.0,
+          "mbk": 34793982.0,
+          "total": 352844792.0
+        },
+        {
+          "branch": "화성 AUTO (중부)",
+          "il": 0.0,
+          "auto": 109072260.0,
+          "mbk": 0.0,
+          "total": 109072260.0
+        },
+        {
+          "branch": "남부지사",
+          "il": 0.0,
+          "auto": 38954300.0,
+          "mbk": 0.0,
+          "total": 38954300.0
+        },
+        {
+          "branch": "인천(서부)",
+          "il": 3366000.0,
+          "auto": 320755600.0,
+          "mbk": 42442118.0,
+          "total": 366563718.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "il": 4336200.0,
+          "auto": 268872010.0,
+          "mbk": 81167668.0,
+          "total": 354375878.0
+        },
+        {
+          "branch": "제주",
+          "il": 18143180.0,
+          "auto": -825000.0,
+          "mbk": 2299108.0,
+          "total": 19617288.0
+        },
+        {
+          "branch": "부산",
+          "il": 23588950.0,
+          "auto": 0.0,
+          "mbk": 33644013.0,
+          "total": 57232963.0
+        }
+      ],
+      "totals": {
+        "total_sales": 3100774222.0,
+        "total_mobil_sell_out": 2956263921.0,
+        "total_collection": 1297312701.0,
+        "total_ar_balance": 9587390236.0
+      }
+    },
+    {
+      "date": "2025-12-07",
+      "sales": [
+        {
+          "branch": "서울,화성 IL",
+          "total_sales": 1654238454.0,
+          "mobil_sell_out": 1611716271.0,
+          "mobil_sell_out_total_l": 338652.0,
+          "mobil_sell_out_flagship_l": 38421.0,
+          "mobil_sell_in_total_l": 167050.0,
+          "mobil_sell_in_flagship_l": 8422.0
+        },
+        {
+          "branch": "창원",
+          "total_sales": 429828889.0,
+          "mobil_sell_out": 402760089.0,
+          "mobil_sell_out_total_l": 73960.0,
+          "mobil_sell_out_flagship_l": 8526.0,
+          "mobil_sell_in_total_l": 67543.0,
+          "mobil_sell_in_flagship_l": 7518.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_sales": 94359638.0,
+          "mobil_sell_out": 85119638.0,
+          "mobil_sell_out_total_l": 22228.0,
+          "mobil_sell_out_flagship_l": 100.0,
+          "mobil_sell_in_total_l": 0.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_sales": 192911550.0,
+          "mobil_sell_out": 190334500.0,
+          "mobil_sell_out_total_l": 37560.0,
+          "mobil_sell_out_flagship_l": 1870.0,
+          "mobil_sell_in_total_l": 19008.0,
+          "mobil_sell_in_flagship_l": 600.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_sales": 452482893.0,
+          "mobil_sell_out": 405125105.0,
+          "mobil_sell_out_total_l": 89827.0,
+          "mobil_sell_out_flagship_l": 3367.0,
+          "mobil_sell_in_total_l": 104015.0,
+          "mobil_sell_in_flagship_l": 5567.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_sales": 210435278.0,
+          "mobil_sell_out": 198049098.0,
+          "mobil_sell_out_total_l": 39834.0,
+          "mobil_sell_out_flagship_l": 2292.0,
+          "mobil_sell_in_total_l": 67438.0,
+          "mobil_sell_in_flagship_l": 8240.0
+        },
+        {
+          "branch": "제주",
+          "total_sales": 24915300.0,
+          "mobil_sell_out": 24915300.0,
+          "mobil_sell_out_total_l": 5292.0,
+          "mobil_sell_out_flagship_l": 260.0,
+          "mobil_sell_in_total_l": 5940.0,
+          "mobil_sell_in_flagship_l": 0.0
+        },
+        {
+          "branch": "부산",
+          "total_sales": 41602220.0,
+          "mobil_sell_out": 38243920.0,
+          "mobil_sell_out_total_l": 13365.0,
+          "mobil_sell_out_flagship_l": 99.0,
+          "mobil_sell_in_total_l": 14552.0,
+          "mobil_sell_in_flagship_l": 0.0
+        }
+      ],
+      "collections": [
+        {
+          "branch": "화성 IL",
+          "total_collection": 583715434.0,
+          "cash": 486588087.0,
+          "bill": 97127347.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 3200532678.0,
+          "current_sales": 1654238454.0,
+          "ar_balance": 4271055698.0
+        },
+        {
+          "branch": "창원",
+          "total_collection": 173106037.0,
+          "cash": 128474087.0,
+          "bill": 44007150.0,
+          "card": 624800.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 696043702.0,
+          "current_sales": 429828889.0,
+          "ar_balance": 952766554.0
+        },
+        {
+          "branch": "화성auto(남부)",
+          "total_collection": 50000000.0,
+          "cash": 50000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1021948556.0,
+          "current_sales": 94359638.0,
+          "ar_balance": 1066308194.0
+        },
+        {
+          "branch": "화성auto(중부)",
+          "total_collection": 173382550.0,
+          "cash": 144828300.0,
+          "bill": 0.0,
+          "card": 28554250.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 455541246.0,
+          "current_sales": 192911550.0,
+          "ar_balance": 475070246.0
+        },
+        {
+          "branch": "인천(서부)",
+          "total_collection": 200000000.0,
+          "cash": 200000000.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 1787588760.0,
+          "current_sales": 452482893.0,
+          "ar_balance": 2040071653.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "total_collection": 71808000.0,
+          "cash": 15808000.0,
+          "bill": 56000000.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 309679575.0,
+          "current_sales": 210435278.0,
+          "ar_balance": 448306853.0
+        },
+        {
+          "branch": "제주",
+          "total_collection": 28088100.0,
+          "cash": 24254100.0,
+          "bill": 0.0,
+          "card": 3834000.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 86649300.0,
+          "current_sales": 24915300.0,
+          "ar_balance": 83476500.0
+        },
+        {
+          "branch": "부산",
+          "total_collection": 17212580.0,
+          "cash": 17212580.0,
+          "bill": 0.0,
+          "card": 0.0,
+          "etc1": 0.0,
+          "etc2": 0.0,
+          "prev_balance": 225944898.0,
+          "current_sales": 41602220.0,
+          "ar_balance": 250334538.0
+        }
+      ],
+      "funds": [
+        {
+          "type": "전잔",
+          "general_deposit": 2315216524.0,
+          "electronic_bill": 160037670.0,
+          "loans": 753546470.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76000000001,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        },
+        {
+          "type": "당입",
+          "general_deposit": 1260065835.0,
+          "electronic_bill": 56000000.0,
+          "loans": 141134497.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "지출",
+          "general_deposit": 1957740429.0,
+          "electronic_bill": 41200000.0,
+          "loans": 76347810.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 0.0,
+          "cma": 0.0,
+          "foreign_usd": 0.0,
+          "foreign_eur": 0.0,
+          "foreign_jpy": 0.0,
+          "foreign_usd_normal": 0.0,
+          "credit_limit": 0.0,
+          "short_term_loan": 0.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 0.0
+        },
+        {
+          "type": "현잔",
+          "general_deposit": 1617541930.0,
+          "electronic_bill": 174837670.0,
+          "loans": 818333157.0,
+          "receivable_bill": 0.0,
+          "savings_insurance": 965598400.0,
+          "cma": 2523107781.0,
+          "foreign_usd": 101728.7,
+          "foreign_eur": 41405.76,
+          "foreign_jpy": 530619.0,
+          "foreign_usd_normal": 210417.96,
+          "credit_limit": 490000000.0,
+          "short_term_loan": 10600000000.0,
+          "long_term_loan": 0.0,
+          "retirement_pension": 891061296.0
+        }
+      ],
+      "major_expenses": [
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 1500000000.0,
+          "description": "윤활유대(IL,AUTO)"
+        },
+        {
+          "client": "모빌코리아윤활유(주)울산",
+          "amount": 264802982.0,
+          "description": "윤활유대(MB)"
+        },
+        {
+          "client": "지에스엠비즈 주식회사 외",
+          "amount": 10110800.0,
+          "description": "윤활유대  "
+        },
+        {
+          "client": "우리-5억5천(261) 외",
+          "amount": 4311122.0,
+          "description": "대출이자(5억5천,12억5천)"
+        },
+        {
+          "client": "현금 시재금",
+          "amount": 4171700.0,
+          "description": "10월말(본사,화성,창원)"
+        },
+        {
+          "client": "롯데렌탈㈜",
+          "amount": 8656000.0,
+          "description": "차량렌탈료(14대)"
+        },
+        {
+          "client": "기아㈜",
+          "amount": 21993365.0,
+          "description": "화성 1톤 차량대금 외"
+        },
+        {
+          "client": "건강보험공단",
+          "amount": 55801070.0,
+          "description": "사대보험 외"
+        },
+        {
+          "client": "삼성카드",
+          "amount": 8482084.0,
+          "description": "삼성카드 이용대금명세서"
+        },
+        {
+          "client": "꽃누리 외",
+          "amount": 79411306.0,
+          "description": "10월 화환대 외"
+        }
+      ],
+      "mobil_payments": [
+        {
+          "branch": "화성 IL",
+          "il": 399575462.0,
+          "auto": 4856500.0,
+          "mbk": 35491073.0,
+          "total": 439923035.0
+        },
+        {
+          "branch": "창원 IL",
+          "il": 262419630.0,
+          "auto": 55631180.0,
+          "mbk": 34793982.0,
+          "total": 352844792.0
+        },
+        {
+          "branch": "화성 AUTO (중부)",
+          "il": 0.0,
+          "auto": 109072260.0,
+          "mbk": 0.0,
+          "total": 109072260.0
+        },
+        {
+          "branch": "남부지사",
+          "il": 0.0,
+          "auto": 38954300.0,
+          "mbk": 0.0,
+          "total": 38954300.0
+        },
+        {
+          "branch": "인천(서부)",
+          "il": 3366000.0,
+          "auto": 320755600.0,
+          "mbk": 42442118.0,
+          "total": 366563718.0
+        },
+        {
+          "branch": "남양주(동부)",
+          "il": 4336200.0,
+          "auto": 268872010.0,
+          "mbk": 81167668.0,
+          "total": 354375878.0
+        },
+        {
+          "branch": "제주",
+          "il": 18143180.0,
+          "auto": -825000.0,
+          "mbk": 2299108.0,
+          "total": 19617288.0
+        },
+        {
+          "branch": "부산",
+          "il": 23588950.0,
+          "auto": 0.0,
+          "mbk": 33644013.0,
+          "total": 57232963.0
+        }
+      ],
+      "totals": {
+        "total_sales": 3100774222.0,
+        "total_mobil_sell_out": 2956263921.0,
+        "total_collection": 1297312701.0,
+        "total_ar_balance": 9587390236.0
+      }
+    }
+  ],
+  "cumulative": {
+    "sales": [
+      {
+        "branch": "서울,화성 IL",
+        "total_sales": 9925430724.0,
+        "mobil_sell_out": 9670297626.0,
+        "mobil_sell_out_total_l": 2031912.0,
+        "mobil_sell_out_flagship_l": 230526.0,
+        "mobil_sell_in_total_l": 1002300.0,
+        "mobil_sell_in_flagship_l": 50532.0
+      },
+      {
+        "branch": "창원",
+        "total_sales": 2578973334.0,
+        "mobil_sell_out": 2416560534.0,
+        "mobil_sell_out_total_l": 443760.0,
+        "mobil_sell_out_flagship_l": 51156.0,
+        "mobil_sell_in_total_l": 405258.0,
+        "mobil_sell_in_flagship_l": 45108.0
+      },
+      {
+        "branch": "화성auto(남부)",
+        "total_sales": 566157828.0,
+        "mobil_sell_out": 510717828.0,
+        "mobil_sell_out_total_l": 133368.0,
+        "mobil_sell_out_flagship_l": 600.0,
+        "mobil_sell_in_total_l": 0.0,
+        "mobil_sell_in_flagship_l": 0.0
+      },
+      {
+        "branch": "화성auto(중부)",
+        "total_sales": 1157469300.0,
+        "mobil_sell_out": 1142007000.0,
+        "mobil_sell_out_total_l": 225360.0,
+        "mobil_sell_out_flagship_l": 11220.0,
+        "mobil_sell_in_total_l": 114048.0,
+        "mobil_sell_in_flagship_l": 3600.0
+      },
+      {
+        "branch": "인천(서부)",
+        "total_sales": 2714897358.0,
+        "mobil_sell_out": 2430750630.0,
+        "mobil_sell_out_total_l": 538962.0,
+        "mobil_sell_out_flagship_l": 20202.0,
+        "mobil_sell_in_total_l": 624090.0,
+        "mobil_sell_in_flagship_l": 33402.0
+      },
+      {
+        "branch": "남양주(동부)",
+        "total_sales": 1262611668.0,
+        "mobil_sell_out": 1188294588.0,
+        "mobil_sell_out_total_l": 239004.0,
+        "mobil_sell_out_flagship_l": 13752.0,
+        "mobil_sell_in_total_l": 404628.0,
+        "mobil_sell_in_flagship_l": 49440.0
+      },
+      {
+        "branch": "제주",
+        "total_sales": 149491800.0,
+        "mobil_sell_out": 149491800.0,
+        "mobil_sell_out_total_l": 31752.0,
+        "mobil_sell_out_flagship_l": 1560.0,
+        "mobil_sell_in_total_l": 35640.0,
+        "mobil_sell_in_flagship_l": 0.0
+      },
+      {
+        "branch": "부산",
+        "total_sales": 249613320.0,
+        "mobil_sell_out": 229463520.0,
+        "mobil_sell_out_total_l": 80190.0,
+        "mobil_sell_out_flagship_l": 594.0,
+        "mobil_sell_in_total_l": 87312.0,
+        "mobil_sell_in_flagship_l": 0.0
+      }
+    ],
+    "collections": [
+      {
+        "branch": "화성 IL",
+        "total_collection": 3502292604.0,
+        "cash": 2919528522.0,
+        "bill": 582764082.0,
+        "card": 0.0,
+        "ar_balance": 4271055698.0
+      },
+      {
+        "branch": "창원",
+        "total_collection": 1038636222.0,
+        "cash": 770844522.0,
+        "bill": 264042900.0,
+        "card": 3748800.0,
+        "ar_balance": 952766554.0
+      },
+      {
+        "branch": "화성auto(남부)",
+        "total_collection": 300000000.0,
+        "cash": 300000000.0,
+        "bill": 0.0,
+        "card": 0.0,
+        "ar_balance": 1066308194.0
+      },
+      {
+        "branch": "화성auto(중부)",
+        "total_collection": 1040295300.0,
+        "cash": 868969800.0,
+        "bill": 0.0,
+        "card": 171325500.0,
+        "ar_balance": 475070246.0
+      },
+      {
+        "branch": "인천(서부)",
+        "total_collection": 1200000000.0,
+        "cash": 1200000000.0,
+        "bill": 0.0,
+        "card": 0.0,
+        "ar_balance": 2040071653.0
+      },
+      {
+        "branch": "남양주(동부)",
+        "total_collection": 430848000.0,
+        "cash": 94848000.0,
+        "bill": 336000000.0,
+        "card": 0.0,
+        "ar_balance": 448306853.0
+      },
+      {
+        "branch": "제주",
+        "total_collection": 168528600.0,
+        "cash": 145524600.0,
+        "bill": 0.0,
+        "card": 23004000.0,
+        "ar_balance": 83476500.0
+      },
+      {
+        "branch": "부산",
+        "total_collection": 103275480.0,
+        "cash": 103275480.0,
+        "bill": 0.0,
+        "card": 0.0,
+        "ar_balance": 250334538.0
+      }
+    ],
+    "funds": {
+      "total_deposit": 7560395010.0,
+      "total_withdraw": 11746442574.0
+    },
+    "totals": {
+      "total_sales": 18604645332.0,
+      "total_mobil_sell_out": 17737583526.0,
+      "total_collection": 7783876206.0,
+      "total_ar_balance": 9587390236.0,
+      "total_funds_in": 7560395010.0
+    }
+  }
+}
