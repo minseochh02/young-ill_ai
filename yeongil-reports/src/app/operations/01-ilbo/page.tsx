@@ -1,12 +1,21 @@
+'use client';
+
+import { useState } from 'react';
+import DateSelector from '@/components/DateSelector';
+
 export default function Report01() {
   const branches = ['서울/화성IL', '창원', '화성auto(남부)', '화성auto(중부)', '인천(서부)', '남양주(동부)', '제주', '부산'];
   const branches2 = ['화성IL', '창원', '화성auto(남부)', '화성auto(중부)', '인천(서부)', '남양주(동부)', '제주', '부산'];
   const mobilBranches = ['화성 IL', '창원 IL', '화성 AUTO (중부)', '남부지사', '인천(서부)', '남양주(동부)', '제주', '부산', 'Total', '잔액'];
 
+  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
+
   return (
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-6">01. 일보현황 (Daily Report)</h1>
-      <p className="text-sm text-gray-500 mb-8">Daily operational report covering all branches - 6 sections</p>
+      <p className="text-sm text-gray-500 mb-6">Daily operational report covering all branches - 6 sections</p>
+
+      <DateSelector selectedDate={selectedDate} onDateChange={setSelectedDate} label="Report Date" />
 
       {/* Section 1: 매출현황 */}
       <section className="mb-12">
