@@ -3,6 +3,116 @@
 import { useState } from 'react';
 import DateSelector from '@/components/DateSelector';
 
+// Type definitions for B2B sales data structure
+interface Product {
+  name: string;
+  qty: number;
+  price: number;
+  supply: number;
+  dsp: number;
+  asp: number;
+  otherCosts?: number;
+  profit_dsp: number;
+  profit_asp: number;
+  rate_dsp: number;
+  rate_asp: number;
+  remarks?: string;
+}
+
+interface Customer {
+  name: string;
+  products: Product[];
+}
+
+interface Manager {
+  name: string;
+  customers: Customer[];
+}
+
+interface Branch {
+  name: string;
+  managers: Manager[];
+}
+
+interface B2BData {
+  branches: Branch[];
+}
+
+// Mock data structure based on actual Excel hierarchy
+const mockData: B2BData = {
+  branches: [
+    {
+      name: '화성사업소',
+      managers: [
+        {
+          name: '조성호',
+          customers: [
+            {
+              name: '(주) 수산세보틱스',
+              products: [
+                { name: 'MOBIL DTE 22 ULTRA [200]', qty: 3, price: 572000, supply: 1716000, dsp: 520000, asp: 156000, otherCosts: 0, profit_dsp: 1040000, profit_asp: 1404000, rate_dsp: 60.6, rate_asp: 81.8 }
+              ]
+            },
+            {
+              name: '(주)서브원',
+              products: [
+                { name: 'MOBIL DTE 25 ULTRA [200]', qty: 1, price: 567500, supply: 567500, dsp: 492000, asp: 492000, otherCosts: 0, profit_dsp: 75500, profit_asp: 75500, rate_dsp: 13.3, rate_asp: 13.3 }
+              ]
+            },
+            {
+              name: 'AJ네트웍스 주식회사',
+              products: [
+                { name: 'MOBIL DELVAC LEGEND 10W40 [20]', qty: 9, price: 64000, supply: 576000, dsp: 55200, asp: 55200, otherCosts: 0, profit_dsp: 79200, profit_asp: 79200, rate_dsp: 13.75, rate_asp: 13.75 }
+              ]
+            },
+            {
+              name: '롯데오토케어(주)',
+              products: [
+                { name: 'MOBIL SUPER TP TURBO 0W30 [1/12]', qty: 70, price: 73992, supply: 5179440, dsp: 50300, asp: 50300, otherCosts: 0, profit_dsp: 1658440, profit_asp: 1658440, rate_dsp: 32.0, rate_asp: 32.0 }
+              ]
+            }
+          ]
+        },
+        {
+          name: '정현우',
+          customers: [
+            {
+              name: '(주)리워터',
+              products: [
+                { name: 'MOBIL PEGASUS 610-sp [200]', qty: 4, price: 900000, supply: 3600000, dsp: 630000, asp: 630000, otherCosts: 0, profit_dsp: 1080000, profit_asp: 1080000, rate_dsp: 30.0, rate_asp: 30.0 }
+              ]
+            },
+            {
+              name: '한국서부발전주식회사태안발전본부',
+              products: [
+                { name: 'MOBIL DTE 732-sp [200]', qty: 4, price: 790000, supply: 3160000, dsp: 575000, asp: 575000, otherCosts: 0, profit_dsp: 860000, profit_asp: 860000, rate_dsp: 27.2, rate_asp: 27.2 }
+              ]
+            }
+          ]
+        },
+        { name: '김중경', customers: [] },
+        { name: '김기진', customers: [] },
+        { name: '임재창', customers: [] },
+        { name: '김건우', customers: [] }
+      ]
+    },
+    {
+      name: '창원사업소',
+      managers: [
+        { name: '박경묵', customers: [] },
+        { name: '이성욱', customers: [] },
+        { name: '조종복', customers: [] }
+      ]
+    },
+    {
+      name: '부산사업소',
+      managers: [
+        { name: '김철주', customers: [] }
+      ]
+    }
+  ]
+};
+
 export default function Report06() {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
 
@@ -87,58 +197,56 @@ export default function Report06() {
                     </tr>
                   </thead>
                   <tbody>
-                    {/* Branch Group */}
-                    <tr className="bg-indigo-100 font-bold">
-                      <td className="border px-3 py-2" colSpan={12}>화성사업소</td>
-                    </tr>
+                    {mockData.branches.map((branch, bIdx) => (
+                      <>
+                        {/* 사업소 */}
+                        <tr key={`branch-${bIdx}`} className="bg-indigo-100 font-bold">
+                          <td className="border px-3 py-2" colSpan={12}>{branch.name}</td>
+                        </tr>
 
-                    {/* Manager */}
-                    <tr className="bg-blue-50 font-semibold">
-                      <td className="border px-3 py-2 pl-8" colSpan={12}>조성호</td>
-                    </tr>
+                        {/* 영업사원 */}
+                        {branch.managers.map((manager, mIdx) => (
+                          <>
+                            <tr key={`manager-${bIdx}-${mIdx}`} className="bg-blue-50 font-semibold">
+                              <td className="border px-3 py-2 pl-8" colSpan={12}>
+                                {manager.name} {manager.customers.length > 0 && `(담당 고객사 ${manager.customers.length}개)`}
+                              </td>
+                            </tr>
 
-                    {/* Customer */}
-                    <tr className="bg-gray-100">
-                      <td className="border px-3 py-2 pl-12" colSpan={12}>(주) 수산세보틱스</td>
-                    </tr>
+                            {/* 고객사 */}
+                            {manager.customers.map((customer, cIdx) => (
+                              <>
+                                <tr key={`customer-${bIdx}-${mIdx}-${cIdx}`} className="bg-gray-100">
+                                  <td className="border px-3 py-2 pl-12" colSpan={12}>{customer.name}</td>
+                                </tr>
 
-                    {/* Product Row */}
-                    <tr className="hover:bg-gray-50">
-                      <td className="border px-3 py-2 pl-16 text-xs">MOBIL DTE 22 ULTRA [200]</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1">-</td>
-                    </tr>
-
-                    {/* More placeholder rows */}
-                    {[...Array(5)].map((_, idx) => (
-                      <tr key={idx} className="hover:bg-gray-50">
-                        <td className="border px-3 py-2 pl-16 text-xs">품목명 {idx + 1}</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1 text-right">-</td>
-                        <td className="border px-2 py-1">-</td>
-                      </tr>
+                                {/* 품목 */}
+                                {customer.products.map((product, pIdx) => (
+                                  <tr key={`product-${bIdx}-${mIdx}-${cIdx}-${pIdx}`} className="hover:bg-gray-50">
+                                    <td className="border px-3 py-2 pl-16 text-xs">{product.name}</td>
+                                    <td className="border px-2 py-1 text-right">{product.qty.toLocaleString()}</td>
+                                    <td className="border px-2 py-1 text-right">{product.price.toLocaleString()}</td>
+                                    <td className="border px-2 py-1 text-right">{product.supply.toLocaleString()}</td>
+                                    <td className="border px-2 py-1 text-right">{product.dsp.toLocaleString()}</td>
+                                    <td className="border px-2 py-1 text-right">{product.asp.toLocaleString()}</td>
+                                    <td className="border px-2 py-1 text-right">{product.otherCosts ? product.otherCosts.toLocaleString() : '-'}</td>
+                                    <td className="border px-2 py-1 text-right">{product.profit_dsp.toLocaleString()}</td>
+                                    <td className="border px-2 py-1 text-right">{product.profit_asp.toLocaleString()}</td>
+                                    <td className="border px-2 py-1 text-right">{product.rate_dsp.toFixed(1)}%</td>
+                                    <td className="border px-2 py-1 text-right">{product.rate_asp.toFixed(1)}%</td>
+                                    <td className="border px-2 py-1">{product.remarks || '-'}</td>
+                                  </tr>
+                                ))}
+                              </>
+                            ))}
+                          </>
+                        ))}
+                      </>
                     ))}
 
                     {/* Summary Row */}
                     <tr className="font-bold bg-yellow-100">
-                      <td className="border px-3 py-2">합계</td>
+                      <td className="border px-3 py-2">전체 합계</td>
                       <td className="border px-2 py-1 text-right">-</td>
                       <td className="border px-2 py-1 text-right">-</td>
                       <td className="border px-2 py-1 text-right">-</td>
