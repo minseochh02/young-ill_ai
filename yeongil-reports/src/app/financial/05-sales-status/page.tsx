@@ -12,12 +12,9 @@ export default function Report05() {
 
   const tabs = [
     { id: 'tab1', name: '판매현황', label: 'Sales Status' },
-    { id: 'tab2', name: 'ㅍ', label: 'Summary' },
     { id: 'tab3', name: '재고현황', label: 'Inventory Status' },
     { id: 'tab4', name: '미판매현황', label: 'Unsold Status' },
     { id: 'tab5', name: '미입고현황', label: 'Unreceived Status' },
-    { id: 'tab6', name: '자료', label: 'Data' },
-    { id: 'tab7', name: 'data', label: 'ERP Download' },
   ];
 
   return (
@@ -146,59 +143,6 @@ export default function Report05() {
                 </tbody>
               </table>
             </div>
-          </section>
-        )}
-
-        {activeTab === 'tab2' && (
-          <section>
-            <h2 className="text-xl font-semibold mb-4 text-blue-900">ㅍ - Summary by Item Code (Monthly Changes)</h2>
-            <p className="text-xs text-gray-600 mb-3">Year-over-year monthly comparison to track changes over time</p>
-            <div className="overflow-x-auto border rounded">
-              <table className="min-w-full text-xs">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border px-2 py-1" rowSpan={2}>품목코드</th>
-                    <th className="border px-2 py-1 bg-blue-50" colSpan={12}>2024년</th>
-                    <th className="border px-2 py-1 bg-green-50" colSpan={12}>2025년</th>
-                    <th className="border px-2 py-1" rowSpan={2}>합계</th>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    {/* 2024 months */}
-                    {['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'].map((month) => (
-                      <th key={`2024-${month}`} className="border px-1 py-1 text-xs bg-blue-50">{month}</th>
-                    ))}
-                    {/* 2025 months */}
-                    {['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'].map((month) => (
-                      <th key={`2025-${month}`} className="border px-1 py-1 text-xs bg-green-50">{month}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[...Array(10)].map((_, idx) => (
-                    <tr key={idx} className="hover:bg-gray-50">
-                      <td className="border px-2 py-1 font-medium">Item-{idx + 1}</td>
-                      {/* 2024 months */}
-                      {[...Array(12)].map((_, i) => (
-                        <td key={`2024-${i}`} className="border px-1 py-1 text-right text-xs">-</td>
-                      ))}
-                      {/* 2025 months */}
-                      {[...Array(12)].map((_, i) => (
-                        <td key={`2025-${i}`} className="border px-1 py-1 text-right text-xs">-</td>
-                      ))}
-                      <td className="border px-2 py-1 text-right font-semibold">-</td>
-                    </tr>
-                  ))}
-                  <tr className="font-semibold bg-gray-200">
-                    <td className="border px-2 py-1">Total</td>
-                    {[...Array(24)].map((_, i) => (
-                      <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
-                    ))}
-                    <td className="border px-2 py-1 text-right">-</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-gray-500 mt-2">* Compare product sales month-by-month across years to identify trends and changes</p>
           </section>
         )}
 
@@ -340,56 +284,6 @@ export default function Report05() {
           </section>
         )}
 
-        {activeTab === 'tab6' && (
-          <section>
-            <h2 className="text-xl font-semibold mb-4 text-blue-900">자료 - Master Summary Table</h2>
-            <div className="overflow-x-auto border rounded">
-              <table className="min-w-full text-xs">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border px-2 py-1">모빌코드</th>
-                    <th className="border px-2 py-1">품목코드</th>
-                    <th className="border px-2 py-1">품명 및 규격</th>
-                    <th className="border px-2 py-1">단위</th>
-                    <th className="border px-2 py-1">규격명</th>
-                    <th className="border px-2 py-1" colSpan={12}>2024년 (1월~12월)</th>
-                    <th className="border px-2 py-1" colSpan={11}>2025년 (1월~11월)</th>
-                    <th className="border px-2 py-1">미판매</th>
-                    <th className="border px-2 py-1">재고현황</th>
-                    <th className="border px-2 py-1">미입고현황</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[...Array(10)].map((_, idx) => (
-                    <tr key={idx} className="hover:bg-gray-50">
-                      <td className="border px-2 py-1">-</td>
-                      <td className="border px-2 py-1">-</td>
-                      <td className="border px-2 py-1">-</td>
-                      <td className="border px-2 py-1">-</td>
-                      <td className="border px-2 py-1">-</td>
-                      {[...Array(23)].map((_, i) => (
-                        <td key={i} className="border px-2 py-1 text-right text-gray-400">-</td>
-                      ))}
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                      <td className="border px-2 py-1 text-right">-</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-gray-500 mt-2">* Consolidated year-over-year view by item with monthly totals</p>
-          </section>
-        )}
-
-        {activeTab === 'tab7' && (
-          <section>
-            <div className="p-8 text-center bg-gray-50 border rounded-lg">
-              <h2 className="text-xl font-semibold mb-2 text-gray-700">data - ERP System Download</h2>
-              <p className="text-gray-500">This tab contains raw ERP system download data and can be ignored for reporting purposes.</p>
-            </div>
-          </section>
-        )}
       </div>
 
       <div className="mt-8 p-4 bg-gray-100 rounded text-sm text-gray-600">
