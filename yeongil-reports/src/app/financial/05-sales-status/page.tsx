@@ -351,6 +351,7 @@ export default function Report05() {
                     <th className="border px-2 py-1">품목코드</th>
                     <th className="border px-2 py-1">품명 및 규격</th>
                     <th className="border px-2 py-1">단위</th>
+                    <th className="border px-2 py-1">규격명</th>
                     <th className="border px-2 py-1" colSpan={12}>2024년 (1월~12월)</th>
                     <th className="border px-2 py-1" colSpan={11}>2025년 (1월~11월)</th>
                     <th className="border px-2 py-1">미판매</th>
@@ -361,6 +362,7 @@ export default function Report05() {
                 <tbody>
                   {[...Array(10)].map((_, idx) => (
                     <tr key={idx} className="hover:bg-gray-50">
+                      <td className="border px-2 py-1">-</td>
                       <td className="border px-2 py-1">-</td>
                       <td className="border px-2 py-1">-</td>
                       <td className="border px-2 py-1">-</td>
