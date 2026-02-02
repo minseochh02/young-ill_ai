@@ -15,7 +15,7 @@ export default function Report10() {
     { id: 'tab5', name: '거래처별원인', label: 'By Customer' },
     { id: 'tab6', name: '신규', label: 'New' },
     { id: 'tab7', name: '55 제품별현황', label: 'Product Status' },
-    { id: 'tab8', name: '4 팀밋전략딜러', label: 'MIT Dealers' },
+    { id: 'tab8', name: '팀및전략딜러', label: 'Team & Strategic Dealers' },
     { id: 'tab9', name: '팀물량', label: 'Team Volume' },
     { id: 'tab10', name: '팀매출액', label: 'Team Sales' },
     { id: 'tab11', name: '쇼핑몰판매현황', label: 'Shopping Mall' },
@@ -886,10 +886,10 @@ export default function Report10() {
           </section>
         )}
 
-        {/* Tab 8: 팀밋전략딜러 */}
+        {/* Tab 8: 팀및전략딜러 */}
         {activeTab === 'tab8' && (
           <section>
-            <h2 className="text-xl font-semibold mb-4 text-blue-900">4 팀밋전략딜러 - Team MIT Strategy Dealer</h2>
+            <h2 className="text-xl font-semibold mb-4 text-blue-900">팀및전략딜러 - Team & Strategic Dealers</h2>
 
             {/* Section: PV/CV */}
             <div className="mb-8">
@@ -917,9 +917,81 @@ export default function Report10() {
                     </tr>
                   </thead>
                   <tbody>
-                    {['맥심팀', '솔개팀', '아리안팀'].map((team, idx) => (
+                    {[
+                      '1맥심팀', '2솔개팀', '3아리안팀', '4미추홀팀', '5랜더스팀',
+                      '6클라쓰팀', '7삼다도팀', '8남부지사'
+                    ].map((team, idx) => (
                       <tr key={idx} className="hover:bg-gray-50">
                         <td className="border px-2 py-1">{team}</td>
+                        {[...Array(32)].map((_, i) => (
+                          <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
+                        ))}
+                      </tr>
+                    ))}
+                    <tr className="font-semibold bg-blue-100">
+                      <td className="border px-2 py-1">팀합계</td>
+                      {[...Array(32)].map((_, i) => (
+                        <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
+                      ))}
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border px-2 py-1">9사무실</td>
+                      {[...Array(32)].map((_, i) => (
+                        <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
+                      ))}
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border px-2 py-1">B2B팀</td>
+                      {[...Array(32)].map((_, i) => (
+                        <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
+                      ))}
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border px-2 py-1">10B2B팀</td>
+                      {[...Array(32)].map((_, i) => (
+                        <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
+                      ))}
+                    </tr>
+                    <tr className="font-bold bg-gray-200">
+                      <td className="border px-2 py-1">총합계</td>
+                      {[...Array(32)].map((_, i) => (
+                        <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
+                      ))}
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Section: 남부지사 */}
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold mb-3 text-purple-800">Section: 남부지사</h3>
+              <div className="overflow-x-auto border rounded">
+                <table className="min-w-full text-xs">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border px-2 py-1" rowSpan={2}>행 레이블</th>
+                      <th className="border px-2 py-1 bg-gray-200" colSpan={2}>2023년</th>
+                      <th className="border px-2 py-1 bg-blue-50" colSpan={14}>2024년</th>
+                      <th className="border px-2 py-1 bg-green-50" colSpan={14}>2025년</th>
+                      <th className="border px-2 py-1" rowSpan={2}>평균 대비</th>
+                      <th className="border px-2 py-1" rowSpan={2}>동기 대비</th>
+                    </tr>
+                    <tr className="bg-gray-50 text-xs">
+                      <th className="border px-1 py-1">합계</th>
+                      <th className="border px-1 py-1">월평균</th>
+                      {allMonths.map(m => <th key={`nb-2024-${m}`} className="border px-1 py-1 bg-blue-50">{m}</th>)}
+                      <th className="border px-1 py-1 bg-blue-100">합계</th>
+                      <th className="border px-1 py-1 bg-blue-100">월평균</th>
+                      {allMonths.map(m => <th key={`nb-2025-${m}`} className="border px-1 py-1 bg-green-50">{m}</th>)}
+                      <th className="border px-1 py-1 bg-green-100">합계</th>
+                      <th className="border px-1 py-1 bg-green-100">월평균</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {['매입', '매출'].map((type, idx) => (
+                      <tr key={idx} className="hover:bg-gray-50">
+                        <td className="border px-2 py-1">{type}</td>
                         {[...Array(32)].map((_, i) => (
                           <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
                         ))}
@@ -930,16 +1002,55 @@ export default function Report10() {
               </div>
             </div>
 
-            {/* Section: 남부지사 */}
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3 text-purple-800">Section: 남부지사</h3>
-              <p className="text-xs text-gray-500 mb-2">Same structure as PV/CV section above</p>
-            </div>
-
             {/* Section: 전략딜러 */}
             <div className="mb-8">
               <h3 className="text-lg font-semibold mb-3 text-purple-800">Section: 전략딜러</h3>
-              <p className="text-xs text-gray-500 mb-2">Same structure as PV/CV section above</p>
+              <div className="overflow-x-auto border rounded">
+                <table className="min-w-full text-xs">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border px-2 py-1" rowSpan={2}>판매처명</th>
+                      <th className="border px-2 py-1 bg-gray-200" colSpan={2}>2023년</th>
+                      <th className="border px-2 py-1 bg-blue-50" colSpan={14}>2024년</th>
+                      <th className="border px-2 py-1 bg-green-50" colSpan={14}>2025년</th>
+                      <th className="border px-2 py-1" rowSpan={2}>평균 대비</th>
+                      <th className="border px-2 py-1" rowSpan={2}>동기 대비</th>
+                    </tr>
+                    <tr className="bg-gray-50 text-xs">
+                      <th className="border px-1 py-1">합계</th>
+                      <th className="border px-1 py-1">월평균</th>
+                      {allMonths.map(m => <th key={`sd-2024-${m}`} className="border px-1 py-1 bg-blue-50">{m}</th>)}
+                      <th className="border px-1 py-1 bg-blue-100">합계</th>
+                      <th className="border px-1 py-1 bg-blue-100">월평균</th>
+                      {allMonths.map(m => <th key={`sd-2025-${m}`} className="border px-1 py-1 bg-green-50">{m}</th>)}
+                      <th className="border px-1 py-1 bg-green-100">합계</th>
+                      <th className="border px-1 py-1 bg-green-100">월평균</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      '모빌유화/오일프랜드',
+                      '원창윤활유',
+                      '이현상사',
+                      '흥국상사(진병택)',
+                      '영동모빌'
+                    ].map((dealer, idx) => (
+                      <tr key={idx} className="hover:bg-gray-50">
+                        <td className="border px-2 py-1">{dealer}</td>
+                        {[...Array(32)].map((_, i) => (
+                          <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
+                        ))}
+                      </tr>
+                    ))}
+                    <tr className="font-bold bg-gray-200">
+                      <td className="border px-2 py-1">총합계</td>
+                      {[...Array(32)].map((_, i) => (
+                        <td key={i} className="border px-1 py-1 text-right text-xs">-</td>
+                      ))}
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         )}
@@ -993,9 +1104,8 @@ export default function Report10() {
           <section>
             <h2 className="text-xl font-semibold mb-4 text-blue-900">팀매출액 - Team Sales Amount</h2>
 
-            {/* Section: 매출액(공급가) */}
             <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3 text-purple-800">Section: 매출액(공급가)</h3>
+              <h3 className="text-lg font-semibold mb-3 text-purple-800">매출액(공급가) - Sales Amount (Supply Price)</h3>
               <div className="overflow-x-auto border rounded">
                 <table className="min-w-full text-xs">
                   <thead className="bg-gray-100">
@@ -1035,11 +1145,6 @@ export default function Report10() {
               </div>
             </div>
 
-            {/* Section: 가격인상 */}
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3 text-purple-800">Section: 가격인상 (Price Increase)</h3>
-              <p className="text-xs text-gray-500 mb-2">Same structure as 매출액(공급가) section above</p>
-            </div>
           </section>
         )}
 
@@ -1047,40 +1152,187 @@ export default function Report10() {
         {activeTab === 'tab11' && (
           <section>
             <h2 className="text-xl font-semibold mb-4 text-blue-900">쇼핑몰판매현황 - Shopping Mall Sales Status</h2>
-            <p className="text-xs text-gray-600 mb-3">합계금액 (Total Amount)</p>
-            <div className="overflow-x-auto border rounded">
-              <table className="min-w-full text-xs">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border px-3 py-2">팀명</th>
-                    <th className="border px-3 py-2">비고</th>
-                    <th className="border px-3 py-2 bg-gray-200">2023년</th>
-                    <th className="border px-3 py-2 bg-gray-200">평균</th>
-                    <th className="border px-3 py-2 bg-blue-50">2024년</th>
-                    <th className="border px-3 py-2 bg-blue-50">평균</th>
-                    {allMonths.map(m => (
-                      <th key={m} className="border px-2 py-1 bg-green-50 text-xs">2025년 {m}</th>
-                    ))}
-                    <th className="border px-3 py-2 bg-green-100">총합계</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {['Team A', 'Team B', 'Team C', '총합계'].map((team, idx) => (
-                    <tr key={idx} className={`hover:bg-gray-50 ${team === '총합계' ? 'font-semibold bg-gray-100' : ''}`}>
-                      <td className="border px-3 py-2">{team}</td>
-                      <td className="border px-3 py-2">-</td>
-                      <td className="border px-3 py-2 text-right">-</td>
-                      <td className="border px-3 py-2 text-right">-</td>
-                      <td className="border px-3 py-2 text-right">-</td>
-                      <td className="border px-3 py-2 text-right">-</td>
-                      {[...Array(12)].map((_, i) => (
-                        <td key={i} className="border px-2 py-1 text-right text-xs">-</td>
-                      ))}
-                      <td className="border px-3 py-2 text-right font-semibold">-</td>
+
+            {/* Table 1: Customer Count Analysis */}
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold mb-3 text-purple-800">Table 1: Customer Count Analysis</h3>
+              <div className="overflow-x-auto border rounded">
+                <table className="min-w-full text-xs">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border px-2 py-1" rowSpan={2}>구분</th>
+                      <th className="border px-2 py-1 bg-blue-50" colSpan={3}>회사 종점대상 거래처수</th>
+                      <th className="border px-2 py-1 bg-green-50" colSpan={4}>현 인터넷 거래처수</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                    <tr className="bg-gray-50 text-xs">
+                      <th className="border px-2 py-1 bg-blue-50">종합대상<br/>거래처수</th>
+                      <th className="border px-2 py-1 bg-blue-50">의사목표수<br/>(50%)</th>
+                      <th className="border px-2 py-1 bg-blue-50">최소목표(30%)<br/>지급 기준</th>
+                      <th className="border px-2 py-1 bg-green-50">대상</th>
+                      <th className="border px-2 py-1 bg-green-50">비대상</th>
+                      <th className="border px-2 py-1 bg-green-50">불인정</th>
+                      <th className="border px-2 py-1 bg-green-50">총거래처수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {['동부사업소', '서부사업소', '중부사업소'].map((branch, idx) => (
+                      <tr key={idx} className="hover:bg-gray-50">
+                        <td className="border px-2 py-1">{branch}</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        <td className="border px-2 py-1 text-right bg-yellow-100">-</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                      </tr>
+                    ))}
+                    <tr className="bg-gray-50">
+                      <td className="border px-2 py-1"></td>
+                      <td className="border px-2 py-1"></td>
+                      <td className="border px-2 py-1"></td>
+                      <td className="border px-2 py-1"></td>
+                      <td className="border px-2 py-1"></td>
+                      <td className="border px-2 py-1"></td>
+                      <td className="border px-2 py-1"></td>
+                      <td className="border px-2 py-1"></td>
+                    </tr>
+                    <tr className="font-bold bg-gray-200">
+                      <td className="border px-2 py-1">총합계</td>
+                      <td className="border px-2 py-1 text-right">-</td>
+                      <td className="border px-2 py-1 text-right">-</td>
+                      <td className="border px-2 py-1 text-right">-</td>
+                      <td className="border px-2 py-1 text-right bg-yellow-100">-</td>
+                      <td className="border px-2 py-1 text-right">-</td>
+                      <td className="border px-2 py-1 text-right">-</td>
+                      <td className="border px-2 py-1 text-right">-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Table 2: Customer Breakdown by Branch */}
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold mb-3 text-purple-800">Table 2: Customer Breakdown (대상/비대상)</h3>
+              <div className="overflow-x-auto border rounded">
+                <table className="min-w-full text-xs">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border px-2 py-1">거래처그룹1코드</th>
+                      <th className="border px-2 py-1">대상</th>
+                      <th className="border px-2 py-1">신규</th>
+                      <th className="border px-2 py-1">인정여부</th>
+                      <th className="border px-2 py-1">거래처수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* 동부사업소 breakdown */}
+                    <tr className="bg-blue-100 font-bold">
+                      <td className="border px-2 py-1" rowSpan={8}>동부사업소</td>
+                      <td className="border px-2 py-1" rowSpan={4}>대상</td>
+                      <td className="border px-2 py-1" rowSpan={3}>신규</td>
+                      <td className="border px-2 py-1">인정</td>
+                      <td className="border px-2 py-1 text-right">19</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border px-2 py-1">기존</td>
+                      <td className="border px-2 py-1 text-right">60</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border px-2 py-1">불인정</td>
+                      <td className="border px-2 py-1 text-right">12</td>
+                    </tr>
+                    <tr className="bg-yellow-50 font-semibold">
+                      <td className="border px-2 py-1" colSpan={2}>대상 요약</td>
+                      <td className="border px-2 py-1 text-right">91</td>
+                    </tr>
+                    <tr className="bg-blue-50">
+                      <td className="border px-2 py-1" rowSpan={2}>비대상</td>
+                      <td className="border px-2 py-1">기존</td>
+                      <td className="border px-2 py-1">불인정</td>
+                      <td className="border px-2 py-1 text-right">13</td>
+                    </tr>
+                    <tr className="bg-yellow-50 font-semibold">
+                      <td className="border px-2 py-1" colSpan={2}>비대상 요약</td>
+                      <td className="border px-2 py-1 text-right">13</td>
+                    </tr>
+                    <tr className="bg-yellow-100 font-bold">
+                      <td className="border px-2 py-1" colSpan={3}>동부사업소 요약</td>
+                      <td className="border px-2 py-1 text-right">104</td>
+                    </tr>
+
+                    {/* 서부사업소, 중부사업소 - same structure collapsed */}
+                    {['서부사업소', '중부사업소'].map((branch) => (
+                      <tr key={branch} className="bg-blue-100 font-bold">
+                        <td className="border px-2 py-1" colSpan={4}>{branch} (same breakdown structure)</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Table 3: 합계금액 (Total Amount) */}
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold mb-3 text-purple-800">Table 3: 합계금액 (Total Amount)</h3>
+              <div className="overflow-x-auto border rounded">
+                <table className="min-w-full text-xs">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border px-2 py-1" rowSpan={2}>팀명</th>
+                      <th className="border px-2 py-1" rowSpan={2}>비고</th>
+                      <th className="border px-2 py-1 bg-gray-200" colSpan={2}>2023년</th>
+                      <th className="border px-2 py-1 bg-blue-50" colSpan={2}>2024년</th>
+                      <th className="border px-2 py-1 bg-green-50" colSpan={12}>2025년</th>
+                      <th className="border px-2 py-1" rowSpan={2}>총합계</th>
+                    </tr>
+                    <tr className="bg-gray-50 text-xs">
+                      <th className="border px-2 py-1">합계</th>
+                      <th className="border px-2 py-1">평균</th>
+                      <th className="border px-2 py-1">합계</th>
+                      <th className="border px-2 py-1">평균</th>
+                      {allMonths.map(m => (
+                        <th key={m} className="border px-2 py-1 bg-green-50">{m}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { team: '1맥심팀', type: '쇼핑몰' },
+                      { team: '1맥심팀', type: '포인트' },
+                      { team: '1맥심팀 요약', type: null },
+                      { team: '2솔개팀', type: '쇼핑몰' },
+                      { team: '2솔개팀', type: '포인트' },
+                      { team: '2솔개팀 요약', type: null },
+                      { team: '3아리안팀', type: '쇼핑몰' },
+                      { team: '3아리안팀', type: '포인트' },
+                      { team: '3아리안팀 요약', type: null },
+                      { team: '5랜더스팀', type: '쇼핑몰' },
+                      { team: '5랜더스팀', type: '포인트' },
+                      { team: '5랜더스팀 요약', type: null },
+                      { team: '6클라쓰팀', type: '쇼핑몰' },
+                      { team: '6클라쓰팀', type: '포인트' },
+                      { team: '6클라쓰팀 요약', type: null },
+                      { team: '총합계', type: null },
+                    ].map((row, idx) => (
+                      <tr key={idx} className={`hover:bg-gray-50 ${row.team.includes('요약') || row.team === '총합계' ? 'font-semibold bg-gray-100' : ''}`}>
+                        <td className="border px-2 py-1">{row.team}</td>
+                        <td className="border px-2 py-1">{row.type || ''}</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        <td className="border px-2 py-1 text-right">-</td>
+                        {[...Array(12)].map((_, i) => (
+                          <td key={i} className="border px-2 py-1 text-right text-xs">-</td>
+                        ))}
+                        <td className="border px-2 py-1 text-right font-semibold">-</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         )}

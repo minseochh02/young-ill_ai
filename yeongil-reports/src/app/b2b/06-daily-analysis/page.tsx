@@ -174,8 +174,8 @@ export default function Report06() {
                     <tr>
                       <th className="border px-3 py-2 bg-yellow-50" rowSpan={2}>날짜 / 사업소 / 고객</th>
                       <th className="border px-2 py-1 bg-blue-50" colSpan={3}>일일매출 현황</th>
-                      <th className="border px-2 py-1 bg-green-50" colSpan={2}>구매현황</th>
-                      <th className="border px-2 py-1 bg-purple-50" colSpan={3}>매출이익</th>
+                      <th className="border px-2 py-1 bg-green-50" colSpan={3}>구매현황</th>
+                      <th className="border px-2 py-1 bg-purple-50" colSpan={2}>매출이익</th>
                       <th className="border px-2 py-1 bg-orange-50" colSpan={2}>이익율 (%)</th>
                       <th className="border px-2 py-1" rowSpan={2}>비고</th>
                     </tr>
@@ -187,8 +187,8 @@ export default function Report06() {
                       {/* 구매현황 */}
                       <th className="border px-2 py-1 text-xs bg-green-50">DSP</th>
                       <th className="border px-2 py-1 text-xs bg-green-50">ASP</th>
+                      <th className="border px-2 py-1 text-xs bg-green-50">기타비용<br/>(운임 외)</th>
                       {/* 매출이익 */}
-                      <th className="border px-2 py-1 text-xs bg-purple-50">기타비용<br/>(운임 외)</th>
                       <th className="border px-2 py-1 text-xs bg-purple-50">매출이익(DSP)</th>
                       <th className="border px-2 py-1 text-xs bg-purple-50">매출이익(ASP)</th>
                       {/* 이익율 */}
@@ -272,11 +272,11 @@ export default function Report06() {
                   </div>
                   <div>
                     <p className="font-medium">구매현황 (Purchase)</p>
-                    <p className="text-gray-600">DSP (Distributor Selling Price), ASP (Actual Selling Price)</p>
+                    <p className="text-gray-600">DSP (Distributor Selling Price), ASP (Actual Selling Price), 기타비용(운임 외)</p>
                   </div>
                   <div>
                     <p className="font-medium">매출이익 (Sales Profit)</p>
-                    <p className="text-gray-600">기타비용, 매출이익(DSP), 매출이익(ASP)</p>
+                    <p className="text-gray-600">매출이익(DSP), 매출이익(ASP)</p>
                   </div>
                   <div>
                     <p className="font-medium">이익율 (Profit Rate %)</p>
