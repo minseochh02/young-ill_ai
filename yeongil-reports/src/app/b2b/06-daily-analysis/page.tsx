@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import DateSelector from '@/components/DateSelector';
+import B2BSalesVisualization from '@/components/visualizations/06-b2b-daily-analysis/B2BSalesVisualization';
 
 // Type definitions for B2B sales data structure
 interface Product {
@@ -115,6 +116,7 @@ const mockData: B2BData = {
 
 export default function Report06() {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
+  const [showVisualization, setShowVisualization] = useState(false);
 
   // Function to get sheet name for a given date
   const getSheetForDate = (dateStr: string) => {
@@ -137,9 +139,21 @@ export default function Report06() {
 
   return (
     <div className="p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">06. B2B일일매출분석 (B2B Daily Sales Analysis)</h1>
-        <p className="text-sm text-gray-500">Daily overview of all branches' B2B sales performance with profitability analysis.</p>
+      <div className="flex justify-between items-start mb-8">
+        <div>
+          <h1 className="text-3xl font-bold mb-2">06. B2B일일매출분석 (B2B Daily Sales Analysis)</h1>
+          <p className="text-sm text-gray-500">Daily overview of all branches' B2B sales performance with profitability analysis.</p>
+        </div>
+        <button
+          onClick={() => setShowVisualization(!showVisualization)}
+          className={`px-6 py-3 rounded-lg font-semibold text-base transition-all shadow-lg ${
+            showVisualization
+              ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800'
+              : 'bg-gradient-to-r from-gray-200 to-gray-300 text-gray-700 hover:from-gray-300 hover:to-gray-400'
+          }`}
+        >
+          {showVisualization ? '📊 Visualized View' : '📋 Show Visualization'}
+        </button>
       </div>
 
       <DateSelector selectedDate={selectedDate} onDateChange={setSelectedDate} label="Report Date" />
@@ -163,10 +177,13 @@ export default function Report06() {
       {/* Report Content */}
       {currentSheet && (
         <div className="min-h-[400px]">
-          <section>
-            <h2 className="text-xl font-semibold mb-4 text-blue-900">
-              B2B 사업부 / 일일매출 분석 - {currentSheet.label}
-            </h2>
+          {showVisualization ? (
+            <B2BSalesVisualization />
+          ) : (
+            <section>
+              <h2 className="text-xl font-semibold mb-4 text-blue-900">
+                B2B 사업부 / 일일매출 분석 - {currentSheet.label}
+              </h2>
 
               <div className="overflow-x-auto border rounded">
                 <table className="min-w-full text-xs">
@@ -285,8 +302,9 @@ export default function Report06() {
                 </div>
               </div>
             </section>
-          </div>
-        )}
+          )}
+        </div>
+      )}
 
       <div className="mt-8 p-4 bg-gray-100 rounded text-sm text-gray-600">
         <p>📊 This is a placeholder UI showing the structure of the B2B일일매출분석 report.</p>

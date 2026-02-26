@@ -222,35 +222,25 @@ export default function Report03() {
                 <td className="border px-3 py-2 font-bold" rowSpan={5}>매출<br/>(Sales)</td>
                 <td className="border px-3 py-2 font-medium" rowSpan={2}>Auto</td>
                 <td className="border px-3 py-2 pl-6">Flagship</td>
-                <td className="border px-3 py-2 text-right">
-                  {loading ? '...' : formatNumber(getAggregatedValue(salesData, 'Auto-Flagship'))}
-                </td>
+                <td className="border px-3 py-2 text-right">-</td>
               </tr>
               <tr className="bg-purple-50">
                 <td className="border px-3 py-2 pl-6">Others</td>
-                <td className="border px-3 py-2 text-right">
-                  {loading ? '...' : formatNumber(getAggregatedValue(salesData, 'Auto-Others'))}
-                </td>
+                <td className="border px-3 py-2 text-right">-</td>
               </tr>
               <tr className="bg-purple-50">
                 <td className="border px-3 py-2 font-medium" rowSpan={2}>IL</td>
                 <td className="border px-3 py-2 pl-6">Flagship</td>
-                <td className="border px-3 py-2 text-right">
-                  {loading ? '...' : formatNumber(getAggregatedValue(salesData, 'IL-Flagship'))}
-                </td>
+                <td className="border px-3 py-2 text-right">-</td>
               </tr>
               <tr className="bg-purple-50">
                 <td className="border px-3 py-2 pl-6">Others</td>
-                <td className="border px-3 py-2 text-right">
-                  {loading ? '...' : formatNumber(getAggregatedValue(salesData, 'IL-Others'))}
-                </td>
+                <td className="border px-3 py-2 text-right">-</td>
               </tr>
               <tr className="bg-purple-50">
                 <td className="border px-3 py-2 font-medium">MB</td>
                 <td className="border px-3 py-2 pl-6">Others</td>
-                <td className="border px-3 py-2 text-right">
-                  {loading ? '...' : formatNumber(getAggregatedValue(salesData, 'MB-Others'))}
-                </td>
+                <td className="border px-3 py-2 text-right">-</td>
               </tr>
 
               {/* 이동 (Transfers/Movement) */}

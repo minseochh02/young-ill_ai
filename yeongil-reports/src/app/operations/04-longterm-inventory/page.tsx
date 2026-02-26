@@ -2,18 +2,32 @@
 
 import { useState } from 'react';
 import DateSelector from '@/components/DateSelector';
+import LongTermInventoryVisualization from '@/components/visualizations/04-longterm-inventory/LongTermInventoryVisualization';
 
 export default function Report04() {
   const branches = ['화성', '창원', '동부', '서부', '제주'];
 
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [selectedBranch, setSelectedBranch] = useState(branches[0]);
+  const [showVisualization, setShowVisualization] = useState(false);
 
   return (
     <div className="p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">04. 장기재고현황 (Long-term Inventory by Branch)</h1>
-        <p className="text-sm text-gray-500">Flags slow-moving stock. Reviewed weekly or before month-end.</p>
+      <div className="flex justify-between items-start mb-8">
+        <div>
+          <h1 className="text-3xl font-bold mb-2">04. 장기재고현황 (Long-term Inventory by Branch)</h1>
+          <p className="text-sm text-gray-500">Flags slow-moving stock. Reviewed weekly or before month-end.</p>
+        </div>
+        <button
+          onClick={() => setShowVisualization(!showVisualization)}
+          className={`px-6 py-3 rounded-lg font-semibold text-base transition-all shadow-lg ${
+            showVisualization
+              ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800'
+              : 'bg-gradient-to-r from-gray-200 to-gray-300 text-gray-700 hover:from-gray-300 hover:to-gray-400'
+          }`}
+        >
+          {showVisualization ? '📊 Visualized View' : '📋 Show Visualization'}
+        </button>
       </div>
 
       <DateSelector selectedDate={selectedDate} onDateChange={setSelectedDate} label="Report Date" />
@@ -50,12 +64,16 @@ export default function Report04() {
 
       {/* Long-term Inventory Table */}
       <section className="mb-12">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-blue-900">Slow-moving Stock</h2>
-          <span className="text-sm text-gray-500">Previous month inventory levels</span>
-        </div>
+        {showVisualization ? (
+          <LongTermInventoryVisualization />
+        ) : (
+          <>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold text-blue-900">Slow-moving Stock</h2>
+              <span className="text-sm text-gray-500">Previous month inventory levels</span>
+            </div>
 
-        <div className="overflow-x-auto border rounded">
+            <div className="overflow-x-auto border rounded">
           <table className="min-w-full text-xs">
             <thead className="bg-gray-100">
               <tr>
@@ -118,6 +136,8 @@ export default function Report04() {
             <span><strong className="text-orange-600">EA</strong> = Each (individual unit)</span>
           </div>
         </div>
+          </>
+        )}
       </section>
 
       <div className="mt-8 p-4 bg-gray-100 rounded text-sm text-gray-600">

@@ -2,6 +2,12 @@
 
 import { useState } from 'react';
 import DateSelector from '@/components/DateSelector';
+import BrandSalesVisualization from '@/components/visualizations/02-daily-sales/BrandSalesVisualization';
+import CollectionsVisualization from '@/components/visualizations/02-daily-sales/CollectionsVisualization';
+import PurchasesOrdersVisualization from '@/components/visualizations/02-daily-sales/PurchasesOrdersVisualization';
+import InventoryVisualization from '@/components/visualizations/02-daily-sales/InventoryVisualization';
+import KeyStatusVisualization from '@/components/visualizations/02-daily-sales/KeyStatusVisualization';
+import NewCompaniesVisualization from '@/components/visualizations/02-daily-sales/NewCompaniesVisualization';
 
 export default function Report02() {
   const brands = ['Mobil', 'Mobil-MB', '블라자 (Blazer)', '훅스 (Fuchs)', '기타(쉘 외 타사제품)'];
@@ -19,11 +25,47 @@ export default function Report02() {
   const [selectedBranch, setSelectedBranch] = useState(branches[0]);
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
 
+  const [showSection1Visualization, setShowSection1Visualization] = useState(false);
+  const [showSection2Visualization, setShowSection2Visualization] = useState(false);
+  const [showSection3Visualization, setShowSection3Visualization] = useState(false);
+  const [showSection4Visualization, setShowSection4Visualization] = useState(false);
+  const [showSection5Visualization, setShowSection5Visualization] = useState(false);
+  const [showSection6Visualization, setShowSection6Visualization] = useState(false);
+
+  // Master toggle function
+  const toggleAllVisualizations = () => {
+    const newValue = !(showSection1Visualization && showSection2Visualization &&
+                       showSection3Visualization && showSection4Visualization &&
+                       showSection5Visualization && showSection6Visualization);
+    setShowSection1Visualization(newValue);
+    setShowSection2Visualization(newValue);
+    setShowSection3Visualization(newValue);
+    setShowSection4Visualization(newValue);
+    setShowSection5Visualization(newValue);
+    setShowSection6Visualization(newValue);
+  };
+
+  const allVisualized = showSection1Visualization && showSection2Visualization &&
+                        showSection3Visualization && showSection4Visualization &&
+                        showSection5Visualization && showSection6Visualization;
+
   return (
     <div className="p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">02. 일일매출수금현황 (Branch Daily Sales & Collections)</h1>
-        <p className="text-sm text-gray-500">Per-branch daily report. Each branch fills this in daily. Feeds into the 일보현황.</p>
+      <div className="flex justify-between items-start mb-8">
+        <div>
+          <h1 className="text-3xl font-bold mb-2">02. 일일매출수금현황 (Branch Daily Sales & Collections)</h1>
+          <p className="text-sm text-gray-500">Per-branch daily report. Each branch fills this in daily. Feeds into the 일보현황.</p>
+        </div>
+        <button
+          onClick={toggleAllVisualizations}
+          className={`px-6 py-3 rounded-lg font-semibold text-base transition-all shadow-lg ${
+            allVisualized
+              ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800'
+              : 'bg-gradient-to-r from-gray-200 to-gray-300 text-gray-700 hover:from-gray-300 hover:to-gray-400'
+          }`}
+        >
+          {allVisualized ? '📊 All Visualized' : '📋 Show All Visualizations'}
+        </button>
       </div>
 
       <DateSelector selectedDate={selectedDate} onDateChange={setSelectedDate} label="Report Date" />
@@ -60,8 +102,24 @@ export default function Report02() {
 
       {/* Section 1: 판매현황 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 1: 판매현황 (Sales Status)</h2>
-        <div className="overflow-x-auto border rounded">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 1: 판매현황 (Sales Status)</h2>
+          <button
+            onClick={() => setShowSection1Visualization(!showSection1Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection1Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection1Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection1Visualization ? (
+          <BrandSalesVisualization date={selectedDate} branch={selectedBranch} />
+        ) : (
+          <div className="overflow-x-auto border rounded">
           <table className="min-w-full text-xs">
             <thead className="bg-gray-100">
               <tr>
@@ -92,12 +150,29 @@ export default function Report02() {
             </tbody>
           </table>
         </div>
+        )}
       </section>
 
       {/* Section 2: 수금현황 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 2: 수금현황 (Collections Status)</h2>
-        <div className="overflow-x-auto border rounded">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 2: 수금현황 (Collections Status)</h2>
+          <button
+            onClick={() => setShowSection2Visualization(!showSection2Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection2Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection2Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection2Visualization ? (
+          <CollectionsVisualization date={selectedDate} branch={selectedBranch} />
+        ) : (
+          <div className="overflow-x-auto border rounded">
           <table className="min-w-full text-xs">
             <thead className="bg-gray-100">
               <tr>
@@ -125,12 +200,29 @@ export default function Report02() {
             </tbody>
           </table>
         </div>
+        )}
       </section>
 
       {/* Section 3: 매입/발주 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 3: 매입/발주 (Purchases / Orders)</h2>
-        <div className="overflow-x-auto border rounded">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 3: 매입/발주 (Purchases / Orders)</h2>
+          <button
+            onClick={() => setShowSection3Visualization(!showSection3Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection3Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection3Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection3Visualization ? (
+          <PurchasesOrdersVisualization date={selectedDate} branch={selectedBranch} />
+        ) : (
+          <div className="overflow-x-auto border rounded">
           <table className="min-w-full text-xs">
             <thead className="bg-gray-100">
               <tr>
@@ -158,12 +250,29 @@ export default function Report02() {
             </tbody>
           </table>
         </div>
+        )}
       </section>
 
       {/* Section 4: 재고 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 4: 재고 (Inventory)</h2>
-        <div className="overflow-x-auto border rounded">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 4: 재고 (Inventory)</h2>
+          <button
+            onClick={() => setShowSection4Visualization(!showSection4Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection4Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection4Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection4Visualization ? (
+          <InventoryVisualization date={selectedDate} branch={selectedBranch} />
+        ) : (
+          <div className="overflow-x-auto border rounded">
           <table className="min-w-full text-xs">
             <thead className="bg-gray-100">
               <tr>
@@ -194,12 +303,29 @@ export default function Report02() {
             </tbody>
           </table>
         </div>
+        )}
       </section>
 
       {/* Additional Section: 주요현황 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">주요현황 (Key Status)</h2>
-        <div className="overflow-x-auto border rounded">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">주요현황 (Key Status)</h2>
+          <button
+            onClick={() => setShowSection5Visualization(!showSection5Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection5Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection5Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection5Visualization ? (
+          <KeyStatusVisualization date={selectedDate} branch={selectedBranch} />
+        ) : (
+          <div className="overflow-x-auto border rounded">
           <table className="min-w-full text-xs">
             <thead className="bg-gray-100">
               <tr>
@@ -221,12 +347,29 @@ export default function Report02() {
             </tbody>
           </table>
         </div>
+        )}
       </section>
 
       {/* Additional Section: 신규개척업체 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">신규개척업체 (Newly Developed Companies)</h2>
-        <div className="overflow-x-auto border rounded">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">신규개척업체 (Newly Developed Companies)</h2>
+          <button
+            onClick={() => setShowSection6Visualization(!showSection6Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection6Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection6Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection6Visualization ? (
+          <NewCompaniesVisualization date={selectedDate} branch={selectedBranch} />
+        ) : (
+          <div className="overflow-x-auto border rounded">
           <table className="min-w-full text-xs">
             <thead className="bg-gray-100">
               <tr>
@@ -248,6 +391,7 @@ export default function Report02() {
             </tbody>
           </table>
         </div>
+        )}
       </section>
 
       <div className="mt-8 p-4 bg-gray-100 rounded text-sm text-gray-600">

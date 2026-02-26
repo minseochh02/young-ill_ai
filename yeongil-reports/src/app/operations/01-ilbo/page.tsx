@@ -2,6 +2,11 @@
 
 import { useState } from 'react';
 import DateSelector from '@/components/DateSelector';
+import SalesStatusVisualization from '@/components/visualizations/01-ilbo/SalesStatusVisualization';
+import ARStatusVisualization from '@/components/visualizations/01-ilbo/ARStatusVisualization';
+import FundsStatusVisualization from '@/components/visualizations/01-ilbo/FundsStatusVisualization';
+import MajorTransactionsVisualization from '@/components/visualizations/01-ilbo/MajorTransactionsVisualization';
+import MobilPaymentVisualization from '@/components/visualizations/01-ilbo/MobilPaymentVisualization';
 
 export default function Report01() {
   const branches = ['서울/화성IL', '창원', '화성auto(남부)', '화성auto(중부)', '인천(서부)', '남양주(동부)', '제주', '부산'];
@@ -9,19 +14,71 @@ export default function Report01() {
   const mobilBranches = ['화성 IL', '창원 IL', '화성 AUTO (중부)', '남부지사', '인천(서부)', '남양주(동부)', '제주', '부산', 'Total', '잔액'];
 
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
+  const [showSection1Visualization, setShowSection1Visualization] = useState(false);
+  const [showSection2Visualization, setShowSection2Visualization] = useState(false);
+  const [showSection3Visualization, setShowSection3Visualization] = useState(false);
+  const [showSection4Visualization, setShowSection4Visualization] = useState(false);
+  const [showSection5Visualization, setShowSection5Visualization] = useState(false);
+  const [showSection6Visualization, setShowSection6Visualization] = useState(false);
+
+  // Master toggle function
+  const toggleAllVisualizations = () => {
+    const newValue = !(showSection1Visualization && showSection2Visualization &&
+                       showSection3Visualization && showSection4Visualization &&
+                       showSection5Visualization && showSection6Visualization);
+    setShowSection1Visualization(newValue);
+    setShowSection2Visualization(newValue);
+    setShowSection3Visualization(newValue);
+    setShowSection4Visualization(newValue);
+    setShowSection5Visualization(newValue);
+    setShowSection6Visualization(newValue);
+  };
+
+  const allVisualized = showSection1Visualization && showSection2Visualization &&
+                        showSection3Visualization && showSection4Visualization &&
+                        showSection5Visualization && showSection6Visualization;
 
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold mb-6">01. 일보현황 (Daily Report)</h1>
-      <p className="text-sm text-gray-500 mb-6">Daily operational report covering all branches - 6 sections</p>
+      <div className="flex justify-between items-start mb-6">
+        <div>
+          <h1 className="text-3xl font-bold mb-2">01. 일보현황 (Daily Report)</h1>
+          <p className="text-sm text-gray-500">Daily operational report covering all branches - 6 sections</p>
+        </div>
+        <button
+          onClick={toggleAllVisualizations}
+          className={`px-6 py-3 rounded-lg font-semibold text-base transition-all shadow-lg ${
+            allVisualized
+              ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800'
+              : 'bg-gradient-to-r from-gray-200 to-gray-300 text-gray-700 hover:from-gray-300 hover:to-gray-400'
+          }`}
+        >
+          {allVisualized ? '📊 All Visualized' : '📋 Show All Visualizations'}
+        </button>
+      </div>
 
       <DateSelector selectedDate={selectedDate} onDateChange={setSelectedDate} label="Report Date" />
 
       {/* Section 1: 매출현황 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 1: 매출현황 (Sales Status)</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 1: 매출현황 (Sales Status)</h2>
+          <button
+            onClick={() => setShowSection1Visualization(!showSection1Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection1Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection1Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        {showSection1Visualization ? (
+          <SalesStatusVisualization date={selectedDate} />
+        ) : (
+          <div className="grid grid-cols-2 gap-6">
           {/* 일계 (Daily) */}
           <div>
             <h3 className="text-sm font-semibold mb-2 bg-blue-100 p-2">일계 (Daily)</h3>
@@ -108,13 +165,29 @@ export default function Report01() {
             </div>
           </div>
         </div>
+        )}
       </section>
 
       {/* Section 2: 외상매출금 현황 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 2: 외상매출금 현황 (AR / Collections Status) <span className="text-sm font-normal text-gray-500">단위(원)</span></h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 2: 외상매출금 현황 (AR / Collections Status) <span className="text-sm font-normal text-gray-500">단위(원)</span></h2>
+          <button
+            onClick={() => setShowSection2Visualization(!showSection2Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection2Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection2Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        {showSection2Visualization ? (
+          <ARStatusVisualization date={selectedDate} />
+        ) : (
+          <div className="grid grid-cols-3 gap-4">
           {/* 일계 (Daily) */}
           <div>
             <h3 className="text-sm font-semibold mb-2 bg-green-100 p-2">일계 (Daily)</h3>
@@ -226,12 +299,29 @@ export default function Report01() {
             </div>
           </div>
         </div>
+        )}
       </section>
 
       {/* Section 3: 자금 현황 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 3: 자금 현황 (Funds Status) <span className="text-sm font-normal text-gray-500">단위(원)</span></h2>
-        <div className="overflow-x-auto border rounded">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 3: 자금 현황 (Funds Status) <span className="text-sm font-normal text-gray-500">단위(원)</span></h2>
+          <button
+            onClick={() => setShowSection3Visualization(!showSection3Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection3Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection3Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection3Visualization ? (
+          <FundsStatusVisualization date={selectedDate} />
+        ) : (
+          <div className="overflow-x-auto border rounded">
           <table className="min-w-full text-xs">
             <thead className="bg-gray-100">
               <tr>
@@ -281,12 +371,29 @@ export default function Report01() {
             </tbody>
           </table>
         </div>
+        )}
       </section>
 
       {/* Section 4: 주요입금현황 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 4: 주요입금현황 (Major Deposits/Payments)</h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 4: 주요입금현황 (Major Deposits/Payments)</h2>
+          <button
+            onClick={() => setShowSection4Visualization(!showSection4Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection4Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection4Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection4Visualization ? (
+          <MajorTransactionsVisualization type="deposit" date={selectedDate} />
+        ) : (
+          <div className="grid grid-cols-3 gap-4">
           {['카드', '어음', '현금'].map((type) => (
             <div key={type}>
               <h3 className="text-sm font-semibold mb-2 bg-purple-100 p-2">{type}</h3>
@@ -313,12 +420,29 @@ export default function Report01() {
             </div>
           ))}
         </div>
+        )}
       </section>
 
       {/* Section 5: 주요비용 지출현황 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 5: 주요비용 지출현황 (Major Expense Disbursements)</h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 5: 주요비용 지출현황 (Major Expense Disbursements)</h2>
+          <button
+            onClick={() => setShowSection5Visualization(!showSection5Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection5Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection5Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
+        </div>
+
+        {showSection5Visualization ? (
+          <MajorTransactionsVisualization type="expense" date={selectedDate} />
+        ) : (
+          <div className="grid grid-cols-3 gap-4">
           {['카드', '어음', '현금'].map((type) => (
             <div key={type}>
               <h3 className="text-sm font-semibold mb-2 bg-orange-100 p-2">{type}</h3>
@@ -345,16 +469,33 @@ export default function Report01() {
             </div>
           ))}
         </div>
+        )}
       </section>
 
       {/* Section 6: 모빌결제내역 */}
       <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4 text-blue-900">Section 6: 모빌결제내역 (Mobil Payment Details)</h2>
-        <div className="mb-2 text-xs text-gray-500 bg-yellow-50 p-2 rounded">
-          Note: This data should come from ERP, but may also arrive via Nateon mail service. See REF. 발주서.
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-blue-900">Section 6: 모빌결제내역 (Mobil Payment Details)</h2>
+          <button
+            onClick={() => setShowSection6Visualization(!showSection6Visualization)}
+            className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+              showSection6Visualization
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {showSection6Visualization ? '📊 Visualized View' : '📋 Table View'}
+          </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        {showSection6Visualization ? (
+          <MobilPaymentVisualization date={selectedDate} />
+        ) : (
+          <>
+            <div className="mb-2 text-xs text-gray-500 bg-yellow-50 p-2 rounded">
+              Note: This data should come from ERP, but may also arrive via Nateon mail service. See REF. 발주서.
+            </div>
+            <div className="grid grid-cols-2 gap-6">
           {/* 일계 (Daily) */}
           <div>
             <h3 className="text-sm font-semibold mb-2 bg-red-100 p-2">일계 (Daily)</h3>
@@ -413,6 +554,8 @@ export default function Report01() {
             </div>
           </div>
         </div>
+          </>
+        )}
       </section>
 
       <div className="mt-8 p-4 bg-gray-100 rounded text-sm text-gray-600">
